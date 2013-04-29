@@ -1,0 +1,21 @@
+/*********************** General Site Wide Selectors ***********************/
+a:link, a:visited {
+  color: black;
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+
+a:hover, a:active {
+  color: #6402ff; }
+
+/*********************** Page Specific Selectors ***************************/
+.logo {
+  float: left;
+  height: auto;
+  max-width: 100%; }
+
+p {
+  float: left; }
