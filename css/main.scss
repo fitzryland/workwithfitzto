@@ -48,23 +48,35 @@ $darkPurple:hsla(264, 100, 10, 0.5);
 /*********************** General Site Wide Selectors ***********************/
 body {
 	// @include linear-gradient(red, green); // need bourbon for this one...
+	background-color:white;
 	background-image:
 		repeating-linear-gradient(45deg,
 			$lightPurple,
 			$lightPurple 10px,
 			$white 10px,
-			$white 30px,
-			$darkPurple 30px,
-			$darkPurple 33px
-		),
+			$white 13px,
+			$darkPurple 13px,
+			$darkPurple 18px,
+			$white 18px,
+			$white 38px,
+			$darkPurple 38px,
+			$darkPurple 48px,
+			$white 48px,
+			$white 100px),
 		repeating-linear-gradient(135deg,
 			$lightPurple,
 			$lightPurple 10px,
 			$white 10px,
-			$white 30px,
-			$darkPurple 30px,
-			$darkPurple 33px
-	);
+			$white 13px,
+			$darkPurple 13px,
+			$darkPurple 18px,
+			$white 18px,
+			$white 38px,
+			$darkPurple 38px,
+			$darkPurple 48px,
+			$white 48px,
+			$white 100px)
+	;
 	font-size:16px;
 	margin:0;
 	padding:0;
@@ -86,7 +98,19 @@ a:hover, a:active {
 	margin: 1em auto;
 	max-width:700px;
 	padding:1em;
+	position:relative;
 	@include group();
+}
+.wrap:before {
+	content:url(../images/logo_0.png);
+	left:-100px;
+	position:absolute;
+	top:-1em;
+	z-index:0;
+}
+header, section, footer {
+	position:relative;
+	z-index:500;
 }
 /*********************** Page Specific Selectors ***************************/
 .logo {
