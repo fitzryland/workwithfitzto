@@ -1,8 +1,8 @@
 // Variables ***************************************************************
 $fullBreak:850px;
 $fullWidth:730px;
-$middleWidth:550px;
 $mobileBreak:600px;
+$middleWidth:550px;
 $mobileWidth:316px;
 
 
@@ -54,27 +54,27 @@ body {
 			$lightPurple,
 			$lightPurple 10px,
 			$white 10px,
-			$white 13px,
-			$darkPurple 13px,
-			$darkPurple 18px,
-			$white 18px,
-			$white 38px,
-			$darkPurple 38px,
-			$darkPurple 48px,
-			$white 48px,
+			$white 15px,
+			$darkPurple 15px,
+			$darkPurple 25px,
+			$lightPurple 25px,
+			$lightPurple 30px,
+			$darkPurple 30px,
+			$darkPurple 45px,
+			$white 45px,
 			$white 100px),
 		repeating-linear-gradient(135deg,
 			$lightPurple,
 			$lightPurple 10px,
 			$white 10px,
-			$white 13px,
-			$darkPurple 13px,
-			$darkPurple 18px,
-			$white 18px,
-			$white 38px,
-			$darkPurple 38px,
-			$darkPurple 48px,
-			$white 48px,
+			$white 15px,
+			$darkPurple 15px,
+			$darkPurple 25px,
+			$lightPurple 25px,
+			$lightPurple 30px,
+			$darkPurple 30px,
+			$darkPurple 45px,
+			$white 45px,
 			$white 100px)
 	;
 	font-size:16px;
@@ -96,28 +96,65 @@ a:hover, a:active {
 .wrap {
 	background-color:$bgWhite;
 	margin: 1em auto;
-	max-width:700px;
+	max-width:$fullWidth;
+	min-height:500px;
 	padding:1em;
 	position:relative;
 	@include group();
-}
-.wrap:before {
-	content:url(../images/logo_0.png);
-	left:-100px;
-	position:absolute;
-	top:-1em;
-	z-index:0;
+	@include break(full) {
+		max-width: $middleWidth;
+	}
+	@include break(mobile) {
+		max-width: $mobileWidth;
+	}
 }
 header, section, footer {
 	position:relative;
 	z-index:500;
 }
-/*********************** Page Specific Selectors ***************************/
-.logo {
-	float:left;
-	height:auto;
-	max-width:100%;
+h1, h2, h3, h4, h5, h6 {
+	font-weight:400;
+	//background-image:none;
 }
-p {
-	float:left;
+/*********************** Page Specific Selectors ***************************/
+body.home {
+	.desc {
+		float:right;
+		@include break(mobile) {
+			float:none;
+			text-align: center;
+		}
+		h1 {
+			@include break(mobile) {
+				font-size: 4.5em;
+				margin:0;
+			}
+
+		}
+		h2 {
+			@include break(mobile) {
+				font-size: 1.9em;
+				margin:0;
+			}
+		}
+		h3 {
+			@include break(mobile) {
+				font-size: 3em;
+				margin:0;
+			}
+		}
+	}
+}
+.logo {
+	left:-2em;
+	position:absolute;
+	top:-2em;
+	@include break(full) {
+
+	}
+	@include break(mobile) {
+		left:-6em;
+		opacity: 0.4;
+		top:-2em;
+	}
 }
