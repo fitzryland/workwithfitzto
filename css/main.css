@@ -2,12 +2,36 @@
 body {
   background-color: white;
   background-image: repeating-linear-gradient(45deg, rgba(224, 204, 255, 0.5), rgba(224, 204, 255, 0.5) 10px, rgba(255, 255, 255, 0.5) 10px, rgba(255, 255, 255, 0.5) 15px, rgba(20, 0, 51, 0.1) 15px, rgba(20, 0, 51, 0.1) 25px, rgba(224, 204, 255, 0.5) 25px, rgba(224, 204, 255, 0.5) 30px, rgba(20, 0, 51, 0.1) 30px, rgba(20, 0, 51, 0.1) 45px, rgba(255, 255, 255, 0.5) 45px, rgba(255, 255, 255, 0.5) 100px), repeating-linear-gradient(135deg, rgba(224, 204, 255, 0.5), rgba(224, 204, 255, 0.5) 10px, rgba(255, 255, 255, 0.5) 10px, rgba(255, 255, 255, 0.5) 15px, rgba(20, 0, 51, 0.1) 15px, rgba(20, 0, 51, 0.1) 25px, rgba(255, 255, 255, 0.5) 25px, rgba(255, 255, 255, 0.5) 30px, rgba(20, 0, 51, 0.1) 30px, rgba(20, 0, 51, 0.1) 45px, rgba(255, 255, 255, 0.5) 45px, rgba(255, 255, 255, 0.5) 100px);
+  color: #20005c;
+  font: 16px 'Open Sans', sans-serif;
   font-size: 16px;
   margin: 0;
   padding: 0; }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 400; }
+
+h1 {
+  font-size: 2.5em; }
+
+h2 {
+  font-size: 2.2em; }
+
+h3 {
+  font-size: 1.5em; }
+
+h4 {
+  font-size: 1.3em; }
+
+h5 {
+  font-size: 1.1em; }
+
+h6 {
+  font-size: 1em; }
+
 a:link, a:visited {
-  color: black;
+  color: #6402ff;
   text-decoration: none;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
@@ -16,7 +40,8 @@ a:link, a:visited {
   transition: all 0.2s ease; }
 
 a:hover, a:active {
-  color: #6402ff; }
+  background-color: #20005c;
+  color: white; }
 
 .wrap {
   margin: 1em auto;
@@ -45,26 +70,47 @@ header, section, footer {
     display: table;
     clear: both; }
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 400; }
+.buttonWrap {
+  display: block;
+  font-size: 1.2em;
+  margin: 1.5em 0;
+  text-align: center; }
+
+a.button:link, a.button:visited {
+  background-image: linear-gradient(155deg, rgba(255, 255, 255, 0.8), #20005c);
+  border-radius: 1.5em;
+  color: #20005c;
+  padding: 1em;
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.5); }
+
+a.button:hover, a.button:active {
+  background-image: linear-gradient(155deg, #20005c, #6402ff);
+  color: white;
+  text-shadow: 2px 2px #20005c; }
 
 /*********************** Page Specific Selectors ***************************/
-body.home .desc {
-  float: right; }
+.homeDesc {
+  float: right;
+  width: 40%; }
   @media only screen and (max-width: 600px) {
-    body.home .desc {
+    .homeDesc {
       float: none;
       text-align: center; } }
+  .homeDesc h1 {
+    margin: 0.2em 0 0;
+    text-align: center; }
+    @media only screen and (max-width: 600px) {
+      .homeDesc h1 {
+        font-size: 4.5em;
+        margin: 0; } }
+  .homeDesc h2 {
+    font-size: 1.4em; }
+    @media only screen and (max-width: 600px) {
+      .homeDesc h2 {
+        font-size: 1.9em;
+        margin: 0; } }
   @media only screen and (max-width: 600px) {
-    body.home .desc h1 {
-      font-size: 4.5em;
-      margin: 0; } }
-  @media only screen and (max-width: 600px) {
-    body.home .desc h2 {
-      font-size: 1.9em;
-      margin: 0; } }
-  @media only screen and (max-width: 600px) {
-    body.home .desc h3 {
+    .homeDesc h3 {
       font-size: 3em;
       margin: 0; } }
 
@@ -77,3 +123,33 @@ body.home .desc {
       left: -6em;
       opacity: 0.4;
       top: -2em; } }
+
+article.project:after {
+  content: "";
+  display: table;
+  clear: both; }
+article.project img {
+  display: block;
+  width: 100%;
+  height: auto; }
+
+article.project {
+  margin-top: 4em; }
+
+article.project:first-child {
+  margin-top: 0; }
+
+.projHead {
+  display: inline;
+  float: left;
+  text-align: center;
+  width: 40%; }
+  .projHead h3 {
+    margin-top: 1em; }
+  .projHead a:link, .projHead a:visited {
+    text-decoration: underline; }
+
+.projCont {
+  display: inline;
+  float: left;
+  width: 60%; }

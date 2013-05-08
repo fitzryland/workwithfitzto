@@ -6,14 +6,15 @@ $middleWidth:550px;
 $mobileWidth:316px;
 
 
-$black:#000000;
+$black:#20005c;
 $purple:#6402ff;
+$yellow:#f1de00;
 $bgWhite:hsla(0, 100, 100, 0.8);
 
 // Gradient Colors
-$lightPurple:hsla(264, 100, 90, 0.5);
+$gLightPurple:hsla(264, 100, 90, 0.5);
 $white:hsla(0, 100, 100, 0.5);
-$darkPurple:hsla(264, 100, 10, 0.1);
+$gDarkPurple:hsla(264, 100, 10, 0.1);
 
 // Mixin's *****************************************************************
 @mixin break($point) {
@@ -52,50 +53,74 @@ body {
 	// single light purple stripe on white
 	// background-image:
 	// 	repeating-linear-gradient(45deg,
-	// 		$lightPurple,
-	// 		$lightPurple 5px,
+	// 		$gLightPurple,
+	// 		$gLightPurple 5px,
 	// 		$white 5px,
 	// 		$white 100px),
 	// 	repeating-linear-gradient(135deg,
-	// 		$lightPurple,
-	// 		$lightPurple 5px,
+	// 		$gLightPurple,
+	// 		$gLightPurple 5px,
 	// 		$white 5px,
 	// 		$white 100px)
 	// ;
 	background-image:
 		repeating-linear-gradient(45deg,
-			$lightPurple,
-			$lightPurple 10px,
+			$gLightPurple,
+			$gLightPurple 10px,
 			$white 10px,
 			$white 15px,
-			$darkPurple 15px,
-			$darkPurple 25px,
-			$lightPurple 25px,
-			$lightPurple 30px,
-			$darkPurple 30px,
-			$darkPurple 45px,
+			$gDarkPurple 15px,
+			$gDarkPurple 25px,
+			$gLightPurple 25px,
+			$gLightPurple 30px,
+			$gDarkPurple 30px,
+			$gDarkPurple 45px,
 			$white 45px,
 			$white 100px),
 		repeating-linear-gradient(135deg,
-			$lightPurple,
-			$lightPurple 10px,
+			$gLightPurple,
+			$gLightPurple 10px,
 			$white 10px,
 			$white 15px,
-			$darkPurple 15px,
-			$darkPurple 25px,
+			$gDarkPurple 15px,
+			$gDarkPurple 25px,
 			$white 25px,
 			$white 30px,
-			$darkPurple 30px,
-			$darkPurple 45px,
+			$gDarkPurple 30px,
+			$gDarkPurple 45px,
 			$white 45px,
 			$white 100px)
 	;
+	color:$black;
+	font:16px 'Open Sans', sans-serif;
 	font-size:16px;
 	margin:0;
 	padding:0;
 }
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Libre Baskerville', serif;
+	font-weight:400;
+}
+h1 {
+	font-size:2.5em;
+}
+h2 {
+	font-size:2.2em;
+}
+h3 {
+	font-size:1.5em;
+}
+h4 {
+	font-size:1.3em;
+}
+h5 {
+	font-size:1.1em;
+}
+h6 {
+	font-size:1em;
+}
 a:link, a:visited {
-	color:$black;
+	color:$purple;
 	text-decoration:none;
 	-webkit-transition: all 0.2s ease;
 	-moz-transition: all 0.2s ease;
@@ -104,7 +129,8 @@ a:link, a:visited {
 	transition: all 0.2s ease;
 }
 a:hover, a:active {
-	color:$purple;
+	background-color:$black;
+	color:white;
 }
 .wrap {
 	margin: 1em auto;
@@ -127,39 +153,62 @@ header, section, footer {
 	z-index:500;
 	@include group();
 }
-h1, h2, h3, h4, h5, h6 {
-	font-weight:400;
-	//background-image:none;
+.buttonWrap {
+	display:block;
+	font-size:1.2em;
+	margin:1.5em 0;
+	text-align:center;
+}
+a.button:link, a.button:visited {
+	background-image: linear-gradient(155deg,
+		$bgWhite,
+		$black
+		);
+	border-radius:1.5em;
+	color:$black;
+	padding: 1em;
+	text-shadow:1px 1px $white;
+}
+a.button:hover, a.button:active {
+	background-image: linear-gradient(155deg,
+		$black,
+		$purple
+		);
+	color:white;
+	text-shadow:2px 2px $black;
 }
 /*********************** Page Specific Selectors ***************************/
-body.home {
-	.desc {
-		float:right;
-		@include break(mobile) {
-			float:none;
-			text-align: center;
-		}
-		h1 {
-			@include break(mobile) {
-				font-size: 4.5em;
-				margin:0;
-			}
 
+.homeDesc {
+	float:right;
+	width: 40%;
+	@include break(mobile) {
+		float:none;
+		text-align: center;
+	}
+	h1 {
+		margin:0.2em 0 0;
+		text-align: center;
+		@include break(mobile) {
+			font-size: 4.5em;
+			margin:0;
 		}
-		h2 {
-			@include break(mobile) {
-				font-size: 1.9em;
-				margin:0;
-			}
+	}
+	h2 {
+		font-size: 1.4em;
+		@include break(mobile) {
+			font-size: 1.9em;
+			margin:0;
 		}
-		h3 {
-			@include break(mobile) {
-				font-size: 3em;
-				margin:0;
-			}
+	}
+	h3 {
+		@include break(mobile) {
+			font-size: 3em;
+			margin:0;
 		}
 	}
 }
+
 .logo {
 	left:-2em;
 	position:absolute;
@@ -172,4 +221,41 @@ body.home {
 		opacity: 0.4;
 		top:-2em;
 	}
+}
+h2.title {
+	// text-align:center;
+	// width:70%;
+}
+article.project {
+	@include group();
+	img {
+		display: block;
+		//margin: 0 auto;
+		//width:550px;
+		width:100%;
+		height: auto;
+	}
+}
+article.project {
+	margin-top:4em;
+}
+article.project:first-child { // not sure why this selector doesnt work
+	margin-top:0;
+}
+.projHead {
+	display:inline;
+	float: left;
+	text-align:center;
+	width:40%;
+	h3 {
+		margin-top: 1em;
+	}
+	a:link, a:visited {
+		text-decoration: underline;
+	}
+}
+.projCont {
+	display:inline;
+	float: left;
+	width:60%;
 }
