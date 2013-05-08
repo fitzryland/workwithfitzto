@@ -139,7 +139,7 @@ a:hover, a:active {
 	position:relative;
 	@include group();
 	@include break(full) {
-		max-width: $middleWidth;
+		width: 95%;
 	}
 	@include break(mobile) {
 		max-width: $mobileWidth;
@@ -164,7 +164,7 @@ a.button:link, a.button:visited {
 		$bgWhite,
 		$black
 		);
-	border-radius:1.5em;
+	border-radius:2em;
 	color:$black;
 	padding: 1em;
 	text-shadow:1px 1px $white;
@@ -177,6 +177,25 @@ a.button:hover, a.button:active {
 	color:white;
 	text-shadow:2px 2px $black;
 }
+footer {
+	text-align:center;
+	p {
+		margin-top: 0;
+	}
+	.icon {
+		font-size: 3em;
+		&:nth-child(3) {
+			padding:0 1em;
+		}
+	}
+	a.icon:link, a.icon:visited {
+		color:$black;
+	}
+	a.icon:hover, a.icon:active {
+		background-color:transparent;
+		color:$purple;
+	}
+}
 /*********************** Page Specific Selectors ***************************/
 
 .homeDesc {
@@ -185,62 +204,56 @@ a.button:hover, a.button:active {
 	@include break(mobile) {
 		float:none;
 		text-align: center;
+		width:100%;
 	}
 	h1 {
 		margin:0.2em 0 0;
 		text-align: center;
 		@include break(mobile) {
-			font-size: 4.5em;
-			margin:0;
+			// font-size: 4.5em;
+			// margin:0;
 		}
 	}
 	h2 {
 		font-size: 1.4em;
 		@include break(mobile) {
-			font-size: 1.9em;
-			margin:0;
+			// font-size: 1.9em;
+			// margin:0;
 		}
 	}
-	h3 {
+	p {
 		@include break(mobile) {
-			font-size: 3em;
-			margin:0;
+			text-align: left;
 		}
 	}
 }
 
 .logo {
+	height:auto;
 	left:-2em;
 	position:absolute;
 	top:-2em;
-	@include break(full) {
-
-	}
+	width:60%;
 	@include break(mobile) {
-		left:-6em;
-		opacity: 0.4;
-		top:-2em;
+		opacity: 0.1;
+		width:115%;
 	}
 }
 h2.title {
-	// text-align:center;
-	// width:70%;
+	margin-bottom:1.1em;
+	text-align:center;
+	width:40%;
 }
 article.project {
 	@include group();
 	img {
 		display: block;
-		//margin: 0 auto;
-		//width:550px;
-		width:100%;
 		height: auto;
+		width:100%;
 	}
 }
 article.project {
-	margin-top:4em;
-}
-article.project:first-child { // not sure why this selector doesnt work
-	margin-top:0;
+	margin-bottom:4em;
 }
 .projHead {
 	display:inline;
@@ -253,9 +266,70 @@ article.project:first-child { // not sure why this selector doesnt work
 	a:link, a:visited {
 		text-decoration: underline;
 	}
+	@include break(mobile) {
+		width:100%;
+	}
 }
 .projCont {
 	display:inline;
 	float: left;
+	margin-top:1.3em;
 	width:60%;
+	@include break(mobile) {
+		width:100%;
+	}
+}
+
+
+
+
+
+
+
+@font-face {
+	font-family: 'workwithfitzto-icons';
+	src:url('../icons/workwithfitzto-icons.eot');
+	src:url('../icons/workwithfitzto-icons.eot?#iefix') format('embedded-opentype'),
+		url('../icons/workwithfitzto-icons.woff') format('woff'),
+		url('../icons/workwithfitzto-icons.ttf') format('truetype'),
+		url('../icons/workwithfitzto-icons.svg#workwithfitzto-icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+.icon-list, .icon-github, .icon-twitter, .icon-facebook, .icon-mail, .icon-feed, .icon-dribbble, .icon-linkedin, .icon-share2 {
+	font-family: 'workwithfitzto-icons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-list:before {
+	content: "\e004";
+}
+.icon-github:before {
+	content: "\e001";
+}
+.icon-twitter:before {
+	content: "\e000";
+}
+.icon-facebook:before {
+	content: "\e002";
+}
+.icon-mail:before {
+	content: "\e008";
+}
+.icon-feed:before {
+	content: "\e007";
+}
+.icon-dribbble:before {
+	content: "\e009";
+}
+.icon-linkedin:before {
+	content: "\e005";
+}
+.icon-share2:before {
+	content: "\f147";
 }
