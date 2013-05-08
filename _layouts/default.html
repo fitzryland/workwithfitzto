@@ -17,11 +17,22 @@
     <body {% if page.bodyClass %} class="{{ page.bodyClass }}" {% endif %}>
         <div class="wrap">
             <header>
+                {{ content }}
             </header>
             <section>
-                {{ content }}
+                {% for project in site.categories.projects %}
+                <article>
+                    <img src="{{ project.img }}"/> <!-- TODO add dimentions -->
+                    <h2>{{ project.title }}</h2>
+                    {{ project.content }}
+                    <a href="{{ project.link }}" target="_blank">{{ project.link }}</a>
+                </article>
+                {% endfor %}
             </section>
             <footer>
+                <span>twitter</span>
+                <span>linkedin</span>
+                <span>email</span>
             </footer>
         </div>
         <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
