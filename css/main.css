@@ -1,6 +1,7 @@
 /*********************** General Site Wide Selectors ***********************/
 body {
   background-color: white;
+  background-image: -webkit-repeating-linear-gradient(45deg, rgba(224, 204, 255, 0.5), rgba(224, 204, 255, 0.5) 10px, rgba(255, 255, 255, 0.5) 10px, rgba(255, 255, 255, 0.5) 15px, rgba(20, 0, 51, 0.1) 15px, rgba(20, 0, 51, 0.1) 25px, rgba(224, 204, 255, 0.5) 25px, rgba(224, 204, 255, 0.5) 30px, rgba(20, 0, 51, 0.1) 30px, rgba(20, 0, 51, 0.1) 45px, rgba(255, 255, 255, 0.5) 45px, rgba(255, 255, 255, 0.5) 100px), -webkit-repeating-linear-gradient(135deg, rgba(224, 204, 255, 0.5), rgba(224, 204, 255, 0.5) 10px, rgba(255, 255, 255, 0.5) 10px, rgba(255, 255, 255, 0.5) 15px, rgba(20, 0, 51, 0.1) 15px, rgba(20, 0, 51, 0.1) 25px, rgba(255, 255, 255, 0.5) 25px, rgba(255, 255, 255, 0.5) 30px, rgba(20, 0, 51, 0.1) 30px, rgba(20, 0, 51, 0.1) 45px, rgba(255, 255, 255, 0.5) 45px, rgba(255, 255, 255, 0.5) 100px);
   background-image: repeating-linear-gradient(45deg, rgba(224, 204, 255, 0.5), rgba(224, 204, 255, 0.5) 10px, rgba(255, 255, 255, 0.5) 10px, rgba(255, 255, 255, 0.5) 15px, rgba(20, 0, 51, 0.1) 15px, rgba(20, 0, 51, 0.1) 25px, rgba(224, 204, 255, 0.5) 25px, rgba(224, 204, 255, 0.5) 30px, rgba(20, 0, 51, 0.1) 30px, rgba(20, 0, 51, 0.1) 45px, rgba(255, 255, 255, 0.5) 45px, rgba(255, 255, 255, 0.5) 100px), repeating-linear-gradient(135deg, rgba(224, 204, 255, 0.5), rgba(224, 204, 255, 0.5) 10px, rgba(255, 255, 255, 0.5) 10px, rgba(255, 255, 255, 0.5) 15px, rgba(20, 0, 51, 0.1) 15px, rgba(20, 0, 51, 0.1) 25px, rgba(255, 255, 255, 0.5) 25px, rgba(255, 255, 255, 0.5) 30px, rgba(20, 0, 51, 0.1) 30px, rgba(20, 0, 51, 0.1) 45px, rgba(255, 255, 255, 0.5) 45px, rgba(255, 255, 255, 0.5) 100px);
   color: #20005c;
   font: 16px 'Open Sans', sans-serif;
@@ -32,7 +33,6 @@ h6 {
 
 a:link, a:visited {
   color: #6402ff;
-  text-decoration: none;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
@@ -64,7 +64,7 @@ header, section, footer {
   margin: 2em 0;
   padding: 1em;
   position: relative;
-  z-index: 500; }
+  z-index: 0; }
   header:after, section:after, footer:after {
     content: "";
     display: table;
@@ -77,16 +77,22 @@ header, section, footer {
   text-align: center; }
 
 a.button:link, a.button:visited {
-  background-image: linear-gradient(155deg, rgba(255, 255, 255, 0.8), #20005c);
+  background-image: -webkit-linear-gradient(155deg, rgba(255, 255, 255, 0.8), #20005c);
+  background-image: -webkit-linear-gradient(155deg, rgba(255, 255, 255, 0.8), #20005c);
   border-radius: 2em;
   color: #20005c;
   padding: 1em;
-  text-shadow: 1px 1px rgba(255, 255, 255, 0.5); }
+  text-decoration: none;
+  text-shadow: -1px -1px rgba(255, 255, 255, 0.5), 1px 1px rgba(255, 255, 255, 0.5), 0px 1px rgba(255, 255, 255, 0.5), 0px -1px rgba(255, 255, 255, 0.5); }
 
 a.button:hover, a.button:active {
   background-image: linear-gradient(155deg, #20005c, #6402ff);
+  background-image: linear-gradient(155deg, #20005c, #6402ff);
   color: white;
   text-shadow: 2px 2px #20005c; }
+
+a.icon {
+  text-decoration: none; }
 
 footer {
   text-align: center; }
@@ -94,7 +100,7 @@ footer {
     margin-top: 0; }
   footer .icon {
     font-size: 3em; }
-    footer .icon:nth-child(3) {
+    footer .icon:nth-child(4) {
       padding: 0 1em; }
   footer a.icon:link, footer a.icon:visited {
     color: #20005c; }
@@ -105,7 +111,9 @@ footer {
 /*********************** Page Specific Selectors ***************************/
 .homeDesc {
   float: right;
-  width: 40%; }
+  position: relative;
+  width: 40%;
+  z-index: 1000; }
   @media only screen and (max-width: 600px) {
     .homeDesc {
       float: none;
@@ -125,7 +133,8 @@ footer {
   left: -2em;
   position: absolute;
   top: -2em;
-  width: 60%; }
+  width: 60%;
+  z-index: 700; }
   @media only screen and (max-width: 600px) {
     .logo {
       opacity: 0.1;
@@ -155,8 +164,6 @@ article.project {
   width: 40%; }
   .projHead h3 {
     margin-top: 1em; }
-  .projHead a:link, .projHead a:visited {
-    text-decoration: underline; }
   @media only screen and (max-width: 600px) {
     .projHead {
       width: 100%; } }
