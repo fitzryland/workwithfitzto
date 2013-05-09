@@ -248,6 +248,9 @@ footer {
 			// margin:0;
 		}
 	}
+	h3 {
+		font-size: 1.3em;
+	}
 	p {
 		@include break(mobile) {
 			text-align: left;
