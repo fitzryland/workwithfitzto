@@ -77,26 +77,25 @@ header, section, footer {
   text-align: center; }
 
 a.button:link, a.button:visited {
-  background-image: -webkit-linear-gradient(335deg, #dac1ff, #7e59b5);
-  background-image: linear, 335deg, #dac1ff, #7e59b5;
+  background-image: -webkit-linear-gradient(-80deg, #dac1ff, #7e59b5);
+  background-image: linear, -80deg, #dac1ff, #7e59b5;
   border-top: 2px solid #9f78d9;
   border-right: 2px solid #7b4ac2;
   border-bottom: 2px solid #7b4ac2;
   border-left: 2px solid #9f78d9;
   border-radius: 2em;
-  color: #20005c;
+  color: #603e92;
   padding: 1em;
   text-decoration: none;
-  text-shadow: -1px -1px 0px #f4ebff, 1px 1px 0px #f4ebff, 0px 1px 0px #f4ebff, 0px -1px 0px #f4ebff; }
+  text-shadow: -1px -1px 0px #dac1ff, 1px 1px 0px #20005c; }
 
 a.button:hover, a.button:active {
-  background-image: -webkit-linear-gradient(335deg, #7e59b5, #dac1ff);
-  background-image: linear, 335deg, #7e59b5, #dac1ff;
+  background-image: -webkit-linear-gradient(-80deg, #7e59b5, #dac1ff);
+  background-image: linear, -80deg, #7e59b5, #dac1ff;
   border-top: 2px solid #7b4ac2;
   border-right: 2px solid #9f78d9;
   border-bottom: 2px solid #9f78d9;
-  border-left: 2px solid #7b4ac2;
-  text-shadow: -1px -1px 4px #f4ebff, 1px 1px 4px #f4ebff, 0px 1px 4px #f4ebff, 0px -1px 4px #f4ebff; }
+  border-left: 2px solid #7b4ac2; }
 
 a.icon {
   text-decoration: none; }
@@ -108,12 +107,12 @@ footer {
   footer .icon {
     font-size: 3em; }
     footer .icon:nth-child(4) {
-      padding: 0 1em; }
+      margin: 0 1em; }
   footer a.icon:link, footer a.icon:visited {
-    color: #20005c; }
+    color: #7e59b5; }
   footer a.icon:hover, footer a.icon:active {
     background-color: transparent;
-    color: #6402ff; }
+    color: #9f78d9; }
 
 /*********************** Page Specific Selectors ***************************/
 .homeDesc {

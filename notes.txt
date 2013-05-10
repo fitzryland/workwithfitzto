@@ -15,3 +15,14 @@ TODD NOTES
 	- svg mask?
 
 FITZ NOTES
+
+
+
+
+
+NEXT VERSION
+- Full individual project pages
+	- more thorough documentation
+- Testimonials
+- video project examples
+- blog
