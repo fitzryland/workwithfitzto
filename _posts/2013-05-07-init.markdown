@@ -1,5 +1,5 @@
 ---
-title: Github Pages Workflow
+title: Github Pages Work Flow
 ---
 ##Simple Version
 

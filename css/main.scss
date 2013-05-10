@@ -17,7 +17,7 @@ $white:hsla(0, 100, 100, 0.5);
 $gDarkPurple:hsla(264, 100, 10, 0.1);
 // Button Colors
 $buttonL:#dac1ff;
-$buttonD:#a07cd5;
+$buttonD:#7e59b5;
 $buttonBorderL:#9f78d9;
 $buttonBorderD:#7b4ac2;
 $buttonTextShadow:#f4ebff;
@@ -166,12 +166,12 @@ header, section, footer {
 	text-align:center;
 }
 a.button:link, a.button:visited {
-	background-image: -webkit-linear-gradient(155deg, $buttonL, $buttonD);
-	background-image: linear-gradient(155deg, $buttonL, $buttonD);
-	border-top:1px solid $buttonBorderL;
+	background-image: -webkit-linear-gradient(335deg, $buttonL, $buttonD);
+	background-image: linear-gradient(335deg, $buttonL, $buttonD);
+	border-top:2px solid $buttonBorderL;
 	border-right:2px solid $buttonBorderD;
 	border-bottom:2px solid $buttonBorderD;
-	border-left:1px solid $buttonBorderL;
+	border-left:2px solid $buttonBorderL;
 	border-radius:2em;
 	color:$black;
 	padding: 1em;
@@ -179,12 +179,12 @@ a.button:link, a.button:visited {
 	text-shadow:-1px -1px 0px $buttonTextShadow, 1px 1px 0px $buttonTextShadow, 0px 1px 0px $buttonTextShadow, 0px -1px 0px $buttonTextShadow;
 }
 a.button:hover, a.button:active {
-	background-image: -webkit-linear-gradient(155deg, $buttonD, $buttonL);
-	background-image: linear-gradient(155deg, $buttonD, $buttonL);
-	border-top:1px solid $buttonBorderD;
+	background-image: -webkit-linear-gradient(335deg, $buttonD, $buttonL);
+	background-image: linear-gradient(335deg, $buttonD, $buttonL);
+	border-top:2px solid $buttonBorderD;
 	border-right:2px solid $buttonBorderL;
 	border-bottom:2px solid $buttonBorderL;
-	border-left:1px solid $buttonBorderD;
+	border-left:2px solid $buttonBorderD;
 	text-shadow:-1px -1px 4px $buttonTextShadow, 1px 1px 4px $buttonTextShadow, 0px 1px 4px $buttonTextShadow, 0px -1px 4px $buttonTextShadow;
 }
 a.icon {

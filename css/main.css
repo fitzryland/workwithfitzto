@@ -77,12 +77,12 @@ header, section, footer {
   text-align: center; }
 
 a.button:link, a.button:visited {
-  background-image: -webkit-linear-gradient(155deg, #dac1ff, #a07cd5);
-  background-image: linear, 155deg, #dac1ff, #a07cd5;
-  border-top: 1px solid #9f78d9;
+  background-image: -webkit-linear-gradient(335deg, #dac1ff, #7e59b5);
+  background-image: linear, 335deg, #dac1ff, #7e59b5;
+  border-top: 2px solid #9f78d9;
   border-right: 2px solid #7b4ac2;
   border-bottom: 2px solid #7b4ac2;
-  border-left: 1px solid #9f78d9;
+  border-left: 2px solid #9f78d9;
   border-radius: 2em;
   color: #20005c;
   padding: 1em;
@@ -90,12 +90,12 @@ a.button:link, a.button:visited {
   text-shadow: -1px -1px 0px #f4ebff, 1px 1px 0px #f4ebff, 0px 1px 0px #f4ebff, 0px -1px 0px #f4ebff; }
 
 a.button:hover, a.button:active {
-  background-image: -webkit-linear-gradient(155deg, #a07cd5, #dac1ff);
-  background-image: linear, 155deg, #a07cd5, #dac1ff;
-  border-top: 1px solid #7b4ac2;
+  background-image: -webkit-linear-gradient(335deg, #7e59b5, #dac1ff);
+  background-image: linear, 335deg, #7e59b5, #dac1ff;
+  border-top: 2px solid #7b4ac2;
   border-right: 2px solid #9f78d9;
   border-bottom: 2px solid #9f78d9;
-  border-left: 1px solid #7b4ac2;
+  border-left: 2px solid #7b4ac2;
   text-shadow: -1px -1px 4px #f4ebff, 1px 1px 4px #f4ebff, 0px 1px 4px #f4ebff, 0px -1px 4px #f4ebff; }
 
 a.icon {

@@ -3,3 +3,15 @@ TODO
 - Redo logo
 	- use the 'black' purple
 	- make a bit smaller to fit 60% width
+
+TODD NOTES
+- Button and social do not match
+- welcome blurb should describe the kind of working relationship that I want
+- Project description structure is good -> state problem -> solution
+	- solution needs to be better
+	- show solution, don't tell
+- Project skills listed under link
+- make the face cooler -> maybe some sparkle in it
+	- svg mask?
+
+FITZ NOTES
