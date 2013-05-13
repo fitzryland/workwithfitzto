@@ -3,6 +3,8 @@ TODO
 - Redo logo
 	- use the 'black' purple
 	- make a bit smaller to fit 60% width
+- add highlight color
+
 
 TODD NOTES
 - Button and social do not match
