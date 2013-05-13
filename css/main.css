@@ -149,9 +149,22 @@ footer {
       width: 115%; } }
 
 h2.title {
+  display: inline;
+  float: left;
   margin-bottom: 1.1em;
   text-align: center;
   width: 40%; }
+  @media only screen and (max-width: 600px) {
+    h2.title {
+      float: none; } }
+
+.portDesc {
+  float: right;
+  width: 60%; }
+  @media only screen and (max-width: 600px) {
+    .portDesc {
+      float: none;
+      width: 100%; } }
 
 article.project:after {
   content: "";

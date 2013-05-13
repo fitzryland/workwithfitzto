@@ -258,9 +258,22 @@ footer {
 	}
 }
 h2.title {
+	display:inline;
+	float:left;
 	margin-bottom:1.1em;
 	text-align:center;
 	width:40%;
+	@include break(mobile) {
+		float:none;
+	}
+}
+.portDesc {
+	float:right;
+	width:60%;
+	@include break(mobile) {
+		float:none;
+		width:100%;
+	}
 }
 article.project {
 	@include group();
