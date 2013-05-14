@@ -176,7 +176,6 @@ a.button:link, a.button:visited {
 	color:#603e92;
 	padding: 1em;
 	text-decoration:none;
-//	text-shadow:-1px -1px 0px $buttonL, 1px 1px 0px $black;
 }
 a.button:hover, a.button:active {
 	background-image: -webkit-linear-gradient(-80deg, $buttonD, $buttonL);
@@ -186,7 +185,6 @@ a.button:hover, a.button:active {
 	border-bottom:2px solid $buttonBorderL;
 	border-left:2px solid $buttonBorderD;
 	color:$black;
-	//text-shadow:0px 0px 1px $buttonTextShadow, 0px 0px 1px $buttonTextShadow, 0px 1px 4px $buttonTextShadow, 0px -1px 4px $buttonTextShadow;
 }
 a.icon {
 	text-decoration:none;
@@ -225,20 +223,13 @@ footer {
 	h1 {
 		margin:0.2em 0 0;
 		text-align: center;
-		@include break(mobile) {
-			// font-size: 4.5em;
-			// margin:0;
-		}
 	}
 	h2 {
 		font-size: 1.4em;
-		@include break(mobile) {
-			// font-size: 1.9em;
-			// margin:0;
-		}
 	}
 	h3 {
 		font-size: 1.3em;
+		text-align: center;
 	}
 	p {
 		@include break(mobile) {
