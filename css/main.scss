@@ -176,7 +176,7 @@ a.button:link, a.button:visited {
 	color:#603e92;
 	padding: 1em;
 	text-decoration:none;
-	text-shadow:-1px -1px 0px $buttonL, 1px 1px 0px $black;
+//	text-shadow:-1px -1px 0px $buttonL, 1px 1px 0px $black;
 }
 a.button:hover, a.button:active {
 	background-image: -webkit-linear-gradient(-80deg, $buttonD, $buttonL);
@@ -185,7 +185,8 @@ a.button:hover, a.button:active {
 	border-right:2px solid $buttonBorderL;
 	border-bottom:2px solid $buttonBorderL;
 	border-left:2px solid $buttonBorderD;
-	//text-shadow:-1px -1px 4px $buttonTextShadow, 1px 1px 4px $buttonTextShadow, 0px 1px 4px $buttonTextShadow, 0px -1px 4px $buttonTextShadow;
+	color:$black;
+	//text-shadow:0px 0px 1px $buttonTextShadow, 0px 0px 1px $buttonTextShadow, 0px 1px 4px $buttonTextShadow, 0px -1px 4px $buttonTextShadow;
 }
 a.icon {
 	text-decoration:none;
