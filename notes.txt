@@ -1,8 +1,4 @@
 TODO
-- Resave Images for full width
-- Redo logo
-	- use the 'black' purple
-	- make a bit smaller to fit 60% width
 - add highlight color
 
 
