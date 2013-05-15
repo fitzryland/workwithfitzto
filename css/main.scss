@@ -173,6 +173,7 @@ header, section, footer {
 }
 a.button:link, a.button:visited {
 	background-image: -webkit-linear-gradient(-80deg, $buttonL, $buttonD);
+	background-image: -moz-linear-gradient(-80deg, $buttonL, $buttonD);
 	background-image: linear-gradient(-80deg, $buttonL, $buttonD);
 	border-top:2px solid $buttonBorderL;
 	border-right:2px solid $buttonBorderD;
@@ -185,6 +186,7 @@ a.button:link, a.button:visited {
 }
 a.button:hover, a.button:active {
 	background-image: -webkit-linear-gradient(-80deg, $buttonD, $buttonL);
+	background-image: -moz-linear-gradient(-80deg, $buttonD, $buttonL);
 	background-image: linear-gradient(-80deg, $buttonD, $buttonL);
 	border-top:2px solid $buttonBorderD;
 	border-right:2px solid $buttonBorderL;

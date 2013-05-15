@@ -84,6 +84,7 @@ header, section, footer {
 
 a.button:link, a.button:visited {
   background-image: -webkit-linear-gradient(-80deg, #dac1ff, #7e59b5);
+  background-image: -moz-linear-gradient(-80deg, #dac1ff, #7e59b5);
   background-image: linear, -80deg, #dac1ff, #7e59b5;
   border-top: 2px solid #9f78d9;
   border-right: 2px solid #7b4ac2;
@@ -96,6 +97,7 @@ a.button:link, a.button:visited {
 
 a.button:hover, a.button:active {
   background-image: -webkit-linear-gradient(-80deg, #7e59b5, #dac1ff);
+  background-image: -moz-linear-gradient(-80deg, #7e59b5, #dac1ff);
   background-image: linear, -80deg, #7e59b5, #dac1ff;
   border-top: 2px solid #7b4ac2;
   border-right: 2px solid #9f78d9;
