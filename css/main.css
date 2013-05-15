@@ -43,6 +43,12 @@ a:hover, a:active {
   background-color: #20005c;
   color: white; }
 
+::selection {
+  background: rgba(224, 204, 255, 0.5); }
+
+::-moz-selection {
+  background: rgba(224, 204, 255, 0.5); }
+
 .wrap {
   margin: 1em auto;
   max-width: 730px;

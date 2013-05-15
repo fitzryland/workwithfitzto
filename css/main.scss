@@ -138,6 +138,12 @@ a:hover, a:active {
 	background-color:$black;
 	color:white;
 }
+::selection {
+	background: $gLightPurple;
+	}
+::-moz-selection {
+	background: $gLightPurple;
+}
 .wrap {
 	margin: 1em auto;
 	max-width:$fullWidth;
