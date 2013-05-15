@@ -178,6 +178,7 @@ article.project:after {
   display: table;
   clear: both; }
 article.project img {
+  clear: both;
   display: block;
   height: auto;
   width: 100%; }
