@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Work With Fitz To {% if page.title %} {{ page.title }} {% else %} {{ ... }} {% endif %}</title>
+        <meta name="description" content="Businesses hire me to build functional and beautiful websites. Making user interfaces to help businesses succeed is my passion. I currently have availability for new projects, so let's talk and get to work.">
+        <meta name="keywords" content="fitz ryland, fitzhugh ryland, fitz hugh ryland, web designer, web design, portland, portland or, portland oregon, pdx, wordpress, freelance">
+        <meta name="viewport" content="width=device-width">
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="{{site.url_root}}/css/normalize.css">
+        <link rel="stylesheet" href="{{site.url_root}}/css/main.css">
+        <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville|Open+Sans' rel='stylesheet' type='text/css'>
+        <script src="{{site.url_root}}/js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body {% if page.bodyClass %} class="{{ page.bodyClass }}" {% endif %}>
+        <div class="wrap">
+            <header>
+                <img src="{{site.url_root}}/images/logo_0_1.png" width="456" height="561" alt="Fitz" class="logo" />
+                <div class="homeDesc">
+                    {{ content }}
+                    {% comment %} {% include nav.html %} {% endcomment %}
+                </div>
+            </header>
