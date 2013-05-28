@@ -18,3 +18,8 @@ NEXT VERSION
 - Testimonials
 - video project examples
 - blog
+- clicky
+	- backup metrics
+	- heat mapping?
+- robots.txt - modify
+- submit sitemap - webmaster tools
