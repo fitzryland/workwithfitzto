@@ -23,3 +23,4 @@ NEXT VERSION
 	- heat mapping?
 - robots.txt - modify
 - submit sitemap - webmaster tools
+- add www redirect
