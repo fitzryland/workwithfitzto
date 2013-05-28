@@ -40,7 +40,7 @@ $buttonTextShadow:#f4ebff;
 // Extendables *************************************************************
 
 /*********************** General Site Wide Selectors ***********************/
-body {
+html {
 	background-color:white;
 	background-image:
 		-webkit-repeating-linear-gradient(45deg,
@@ -98,6 +98,8 @@ body {
 			$white 45px,
 			$white 100px)
 	;
+}
+body {
 	color:$black;
 	font:16px 'Open Sans', sans-serif;
 	font-size:16px;

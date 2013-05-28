@@ -24,3 +24,5 @@ NEXT VERSION
 - robots.txt - modify
 - submit sitemap - webmaster tools
 - add www redirect
+- meta description might be too long
+- add alt and meta text to images
