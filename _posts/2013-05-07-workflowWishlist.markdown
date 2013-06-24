@@ -10,3 +10,5 @@ Title: Work Flow Wish List
 	"sudo gem uninstall directory_watcher && sudo gem install directory_watcher -v 1.4.1"
 	- from - http://stackoverflow.com/questions/15591000/jekylls-auto-doesnt-work
 - easily toggle-able live reload.
+
+http://davidwalsh.name/htaccess-maintenance-page-redirect

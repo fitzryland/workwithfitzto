@@ -76,3 +76,7 @@ Title: WordPress Security Protocol
 # Links
 <a href="http://codex.wordpress.org/Hardening_WordPress">Hardening WordPress</a>
 <a href="http://ithemes.com/2013/04/15/ongoing-wordpress-attacks-details-and-solutions/">iThemes Ongoing WordPress Attacks Details and Solutions</a>
+http://support.hostgator.com/articles/specialized-help/technical/wordpress/wordpress-login-brute-force-attack
+http://blog.sucuri.net/2013/04/mass-wordpress-brute-force-attacks-myth-or-reality.html
+http://wpengine.com/2013/05/brad-williams-on-secure-wordpress-development/
+http://wpengine.com/2013/04/how-tony-perez-of-sucuri-sets-up-his-own-security/
