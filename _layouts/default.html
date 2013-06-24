@@ -1,5 +1,5 @@
 {% include header.html %}
-            <section>
+            <section id="portfolio">
                 <h2 class="title">Portfolio</h2>
                 <p class="portDesc">To give you a brief idea of what I've been up to recently, here are three websites that I completed in 2013. Each represents a passion of mine -- professional or otherwise -- and are built using the latest web standards on WordPress.</p>
                 {% for project in site.categories.projects %}
@@ -15,6 +15,15 @@
                         {{ project.content }}
                     </div>
                 </article>
+                {% endfor %}
+            </section>
+            <section id="documentation">
+                {% for post in site.categories.document %}
+                <div class="post">
+                    <h3>
+                        <a href="{{ post.url }}">{{ post.title }}</a>
+                    </h3>
+                </div>
                 {% endfor %}
             </section>
             <footer>
