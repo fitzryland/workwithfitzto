@@ -159,21 +159,20 @@ footer {
       opacity: 0.1;
       width: 115%; } }
 
-h2.title {
-  display: inline;
+.title {
   float: left;
-  margin-bottom: 1.1em;
+  font-size: 1.9em;
   text-align: center;
   width: 40%; }
   @media only screen and (max-width: 600px) {
-    h2.title {
+    .title {
       float: none; } }
 
-.portDesc {
-  float: right;
+.secDesc {
+  display: inline-block;
   width: 60%; }
   @media only screen and (max-width: 600px) {
-    .portDesc {
+    .secDesc {
       float: none;
       width: 100%; } }
 

@@ -259,18 +259,17 @@ footer {
 		width:115%;
 	}
 }
-h2.title {
-	display:inline;
-	float:left;
-	margin-bottom:1.1em;
+.title {
+	float: left;
+	font-size: 1.9em;
 	text-align:center;
 	width:40%;
 	@include break(mobile) {
 		float:none;
 	}
 }
-.portDesc {
-	float:right;
+.secDesc {
+	display: inline-block;
 	width:60%;
 	@include break(mobile) {
 		float:none;
