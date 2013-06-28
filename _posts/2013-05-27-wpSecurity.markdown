@@ -25,12 +25,12 @@ Title: WordPress Security Protocol
 	<li>Checking and Setting file permissions</li>
 	<li>Kill PHP execution
 		<p>wp-includes, uploads - with an .htaccess in that direcroty
-			<pre>
+<!-- 			<pre>
 				#Protect [Directory Name]
 				<Files *.php>
 				Deny from all
 				</Files>
-			</pre>
+			</pre> -->
 		</p>
 	</li>
 	<li><a href="http://en.blog.wordpress.com/2013/04/05/two-step-authentication/">Two Factor Authentication</a></li>
