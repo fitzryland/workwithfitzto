@@ -1,7 +1,9 @@
 ---
 title: WordPress Security Protocol
+layout: single
 ---
-# Theme Development
+
+## Theme Development
 <ul>
 	<li>Disallow File Editing from Administration <pre>define('DISALLOW_FILE_EDIT', true);</pre></li>
 	<li>Theme Check -> Plugin</li>
@@ -12,14 +14,14 @@ title: WordPress Security Protocol
 	<li></li>
 	<li></li>
 </ul>
-# WordPress Installation
+## WordPress Installation
 <ul>
 	<li>Salts</li>
 	<li>Database Prefix Change</li>
 	<li>Different database user per database</li>
 	<li>Don't use "admin"</li>
 </ul>
-# Just After Installation
+## Just After Installation
 <ul>
 	<li>.htaccess firewall <a href="http://perishablepress.com/5g-blacklist-2013/">5G Blacklist 2013 - Perishable Press</a></li>
 	<li>Checking and Setting file permissions</li>
@@ -35,7 +37,7 @@ title: WordPress Security Protocol
 	</li>
 	<li><a href="http://en.blog.wordpress.com/2013/04/05/two-step-authentication/">Two Factor Authentication</a></li>
 </ul>
-# Continued Use
+## Continued Use
 <ul>
 	<li>Again, don't use "admin" etc.</li>
 	<li>Strong Passwords</li>
@@ -47,22 +49,22 @@ title: WordPress Security Protocol
 	<li>never share accounts -> accountability</li>
 	<li>never give someone higher privileges than they need</li>
 </ul>
-# Backups
+## Backups
 <ul>
 	<li>Passive Backups</li>
 	<li>Backups at crucial points</li>
 	<li></li>
 </ul>
-# Version Control
+## Version Control
 <ul>
 	<li>GIT</li>
 </ul>
-# Extra Credit
+## Extra Credit
 <ul>
 	<li>No PHP Write Permission</li>
 	<li>Filter access by IP</li>
 </ul>
-# Plugins
+## Plugins
 <ul>
 	<li>http://wordpress.org/plugins/sucuri-scanner/</li>
 	<li>http://wordpress.org/plugins/limit-login-attempts/</li>
@@ -73,7 +75,7 @@ title: WordPress Security Protocol
 	<li></li>
 	<li></li>
 </ul>
-# Links
+## Links
 <a href="http://codex.wordpress.org/Hardening_WordPress">Hardening WordPress</a>
 <a href="http://ithemes.com/2013/04/15/ongoing-wordpress-attacks-details-and-solutions/">iThemes Ongoing WordPress Attacks Details and Solutions</a>
 http://support.hostgator.com/articles/specialized-help/technical/wordpress/wordpress-login-brute-force-attack
