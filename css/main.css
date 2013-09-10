@@ -123,19 +123,11 @@ header, section, footer {
   width: 90%;
   z-index: 700; }
 
-footer {
+footer p {
+  margin-top: 0; }
+
+.footer_social {
   text-align: center; }
-  footer p {
-    margin-top: 0; }
-  footer .icon {
-    font-size: 3em; }
-    footer .icon:nth-child(4) {
-      margin: 0 1em; }
-  footer a.icon:link, footer a.icon:visited {
-    color: #7e59b5; }
-  footer a.icon:hover, footer a.icon:active {
-    background-color: transparent;
-    color: #9f78d9; }
 
 .home_section-title {
   font-size: 1.9em;

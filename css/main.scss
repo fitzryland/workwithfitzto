@@ -303,23 +303,12 @@ header, section, footer {
 	z-index:700;
 }
 footer {
-	text-align:center;
 	p {
 		margin-top: 0;
 	}
-	.icon {
-		font-size: 3em;
-		&:nth-child(4) {
-			margin:0 1em;
-		}
-	}
-	a.icon:link, a.icon:visited {
-		color:$buttonD;
-	}
-	a.icon:hover, a.icon:active {
-		background-color:transparent;
-		color:$buttonBorderL;
-	}
+}
+.footer_social {
+	text-align: center;
 }
 // `7MM"""Mq.
 //   MM   `MM.
