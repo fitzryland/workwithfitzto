@@ -1,6 +1,7 @@
 ---
-title: WordPress Security Protocol
+title: WordPress Security
 layout: single
+excerpt: The whole shabang on things to consider for WordPress security.
 ---
 
 ## Theme Development

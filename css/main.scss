@@ -33,7 +33,9 @@ $buttonBorderL:#9f78d9;
 $buttonBorderD:#7b4ac2;
 $buttonTextShadow:#f4ebff;
 
-$mobileWidth:20em;
+$mobileWidth: 20em;
+$midWidth: 40em;
+$fullWidth: 60em;
 // media querys shamelessly stolen/marginally adapted from https://gist.github.com/miguelmota/5316827
 $mobile-max-size: 640px !default;
 $tablet-min-size: 768px !default;
@@ -263,10 +265,16 @@ a.button:hover, a.button:active {
 
 .wrap {
 	margin: 1em auto;
-	max-width:$mobileWidth;
-	min-height:500px;
-	position:relative;
+	width: $mobileWidth;
+	min-height: 500px;
+	position: relative;
 	@include group();
+	@include break(tablet-andup) {
+		width: $midWidth;
+	}
+	@include break(desktop) {
+		width: $fullWidth;
+	}
 }
 header, section, footer {
 	background-color:$bgWhite;
@@ -374,4 +382,12 @@ a.project-thumb:link, a.project-thumb:visited {
 	top: 0;
 	z-index: 200;
 	@include transition(opacity);
+}
+.home_post {
+	h3 {
+		margin-bottom: 0;
+	}
+	p {
+		margin-top: 0.5em;
+	}
 }
