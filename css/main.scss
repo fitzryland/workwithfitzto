@@ -18,11 +18,6 @@
 //     `MM A'  ,pm9MM    MM       MM   ,pm9MM  MM     M8 MM 8M"""""" `YMMMa.
 //      :MM;  8M   MM    MM       MM  8M   MM  MM.   ,M9 MM YM.    , L.   I8
 //       VF   `Moo9^Yo..JMML.   .JMML.`Moo9^Yo.P^YbmdP'.JMML.`Mbmmd' M9mmmP'
-$fullBreak:850px;
-$fullWidth:730px;
-$mobileBreak:600px;
-$middleWidth:550px;
-$mobileWidth:316px;
 // Colors
 $black:#20005c;
 $purple:#6402ff;
@@ -38,6 +33,7 @@ $buttonBorderL:#9f78d9;
 $buttonBorderD:#7b4ac2;
 $buttonTextShadow:#f4ebff;
 
+$mobileWidth:20em;
 // media querys shamelessly stolen/marginally adapted from https://gist.github.com/miguelmota/5316827
 $mobile-max-size: 640px !default;
 $tablet-min-size: 768px !default;
@@ -88,14 +84,19 @@ $desktop-large-min-size: 1200px !default;
 	}
 }
 
-
-
 @mixin group() {
 	&:after {
 		content: "";
 		display: table;
 		clear: both;
 	}
+}
+@mixin transition($prop) {
+	-webkit-transition: $prop 0.2s ease;
+	-moz-transition: $prop 0.2s ease;
+	-o-transition: $prop 0.2s ease;
+	-ms-transition: $prop 0.2s ease;
+	transition: $prop 0.2s ease;
 }
 //                                                        ,,
 // `7MM"""YMM               mm                          `7MM
@@ -217,14 +218,10 @@ h6 {
 }
 a:link, a:visited {
 	color:$purple;
-	-webkit-transition: all 0.2s ease;
-	-moz-transition: all 0.2s ease;
-	-o-transition: all 0.2s ease;
-	-ms-transition: all 0.2s ease;
-	transition: all 0.2s ease;
+	@include transition(all);
 }
 a:hover, a:active {
-	background-color:$black;
+//	background-color:$black;
 	color:white;
 }
 a.button:link, a.button:visited {
@@ -349,30 +346,41 @@ footer {
 	float:none;
 	width:100%;
 }
-article.project {
-	@include group();
-	img {
-		clear:both;
-		display: block;
-		height: auto;
-		width:100%;
-	}
-}
-article.project {
-	margin-bottom:4em;
-}
-.projHead {
-	display:inline;
-	float: left;
-	text-align:center;
-	width:100%;
+.project-thumb {
+	display: block;
+	height: 13em;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	width: 18em;
 	h3 {
-		margin-top: 1em;
+		background-color: $white;
+		padding: 0.5em 0;
+		position: relative;
+		z-index: 800;
+	}
+	&:hover {
+		.project-thumb-image {
+			opacity: 1;
+		}
 	}
 }
-.projCont {
-	display:inline;
-	float: left;
-	margin-top:1.3em;
-	width:100%;
+a.project-thumb:link, a.project-thumb:visited {
+	color: $black;
+	text-shadow: 0em 0em 0.5em white;
+}
+.project-thumb-image {
+	background-position: no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	bottom: 0;
+	left: 0;
+	opacity: 0.5;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 200;
+	@include transition(opacity);
 }

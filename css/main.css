@@ -41,7 +41,6 @@ a:link, a:visited {
   transition: all 0.2s ease; }
 
 a:hover, a:active {
-  background-color: #20005c;
   color: white; }
 
 a.button:link, a.button:visited {
@@ -81,7 +80,7 @@ a.button:hover, a.button:active {
 
 .wrap {
   margin: 1em auto;
-  max-width: 316px;
+  max-width: 20em;
   min-height: 500px;
   position: relative; }
   .wrap:after {
@@ -148,29 +147,40 @@ footer {
   float: none;
   width: 100%; }
 
-article.project:after {
-  content: "";
-  display: table;
-  clear: both; }
-article.project img {
-  clear: both;
+.project-thumb {
   display: block;
-  height: auto;
-  width: 100%; }
-
-article.project {
-  margin-bottom: 4em; }
-
-.projHead {
-  display: inline;
-  float: left;
+  height: 13em;
+  position: relative;
   text-align: center;
-  width: 100%; }
-  .projHead h3 {
-    margin-top: 1em; }
+  text-decoration: none;
+  width: 18em; }
+  .project-thumb h3 {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 0.5em 0;
+    position: relative;
+    z-index: 800; }
+  .project-thumb:hover .project-thumb-image {
+    opacity: 1; }
 
-.projCont {
-  display: inline;
-  float: left;
-  margin-top: 1.3em;
-  width: 100%; }
+a.project-thumb:link, a.project-thumb:visited {
+  color: #20005c;
+  text-shadow: 0em 0em 0.5em white; }
+
+.project-thumb-image {
+  background-position: no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  bottom: 0;
+  left: 0;
+  opacity: 0.5;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 200;
+  -webkit-transition: opacity 0.2s ease;
+  -moz-transition: opacity 0.2s ease;
+  -o-transition: opacity 0.2s ease;
+  -ms-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease; }
