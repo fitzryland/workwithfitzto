@@ -52,19 +52,16 @@ a:hover, a:active {
 
 .wrap {
   margin: 1em auto;
-  max-width: 730px;
+  max-width: 316px;
   min-height: 500px;
   position: relative; }
   .wrap:after {
     content: "";
     display: table;
     clear: both; }
-  @media only screen and (max-width: 850px) {
+  @media only screen and (min-width: 979px) {
     .wrap {
-      width: 95%; } }
-  @media only screen and (max-width: 600px) {
-    .wrap {
-      max-width: 316px; } }
+      max-width: 95%; } }
 
 header, section, footer {
   background-color: rgba(255, 255, 255, 0.8);
@@ -92,7 +89,7 @@ a.button:link, a.button:visited {
   border-bottom: 2px solid #7b4ac2;
   border-left: 2px solid #9f78d9;
   border-radius: 2em;
-  color: #603e92;
+  color: #20005c;
   padding: 1em;
   text-decoration: none; }
 
@@ -128,7 +125,7 @@ footer {
   position: relative;
   width: 40%;
   z-index: 1000; }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 640px) {
     .homeDesc {
       float: none;
       text-align: center;
@@ -141,9 +138,6 @@ footer {
   .homeDesc h3 {
     font-size: 1.3em;
     text-align: center; }
-  @media only screen and (max-width: 600px) {
-    .homeDesc p {
-      text-align: left; } }
 
 .logo {
   height: auto;
@@ -151,25 +145,23 @@ footer {
   position: absolute;
   top: -2em;
   width: 60%;
-  z-index: 700; }
-  @media only screen and (max-width: 600px) {
-    .logo {
-      opacity: 0.1;
-      width: 115%; } }
+  z-index: 700;
+  opacity: 0.1;
+  width: 115%; }
 
 .title {
   float: left;
   font-size: 1.9em;
   text-align: center;
   width: 40%; }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 640px) {
     .title {
       float: none; } }
 
 .secDesc {
   display: inline-block;
   width: 60%; }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 640px) {
     .secDesc {
       float: none;
       width: 100%; } }
@@ -194,7 +186,7 @@ article.project {
   width: 40%; }
   .projHead h3 {
     margin-top: 1em; }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 640px) {
     .projHead {
       width: 100%; } }
 
@@ -203,6 +195,6 @@ article.project {
   float: left;
   margin-top: 1.3em;
   width: 60%; }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 640px) {
     .projCont {
       width: 100%; } }
