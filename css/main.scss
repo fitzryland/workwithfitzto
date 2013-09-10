@@ -26,7 +26,6 @@ $mobileWidth:316px;
 // Colors
 $black:#20005c;
 $purple:#6402ff;
-$yellow:#f1de00;
 $bgWhite:hsla(0, 100, 100, 0.8);
 // Gradient Colors
 $gLightPurple:hsla(264, 100, 90, 0.5);
@@ -54,15 +53,6 @@ $desktop-large-min-size: 1200px !default;
 //   M  YM.P'  MM    MM      XMX      MM    MM    MM   `YMMMa.
 //   M  `YM'   MM    MM    ,V' VA.    MM    MM    MM   L.   I8
 // .JML. `'  .JMML..JMML..AM.   .MA..JMML..JMML  JMML. M9mmmP'
-@mixin break($point) {
-	@if $point == full {
-		@media only screen and (max-width: $fullBreak) { @content; }
-	}
-	@else if $point == mobile {
-		@media only screen and (max-width: $mobileBreak) { @content; }
-	}
-}
-
 
 // media querys shamelessly stolen/marginally adapted from https://gist.github.com/miguelmota/5316827
 @mixin break($media) {
@@ -237,36 +227,6 @@ a:hover, a:active {
 	background-color:$black;
 	color:white;
 }
-::selection {
-	background: $gLightPurple;
-	}
-::-moz-selection {
-	background: $gLightPurple;
-}
-.wrap {
-	margin: 1em auto;
-	max-width:$mobileWidth;
-	min-height:500px;
-	position:relative;
-	@include group();
-	@include break(desktop) {
-		max-width: 95%;
-	}
-}
-header, section, footer {
-	background-color:$bgWhite;
-	margin:2em 0;
-	padding:1em;
-	position:relative;
-	z-index:0;
-	@include group();
-}
-.buttonWrap {
-	display:block;
-	font-size:1.2em;
-	margin:1.5em 0;
-	text-align:center;
-}
 a.button:link, a.button:visited {
 	background-image: -webkit-linear-gradient(-80deg, $buttonL, $buttonD);
 	background-image: -moz-linear-gradient(-80deg, $buttonL, $buttonD);
@@ -290,8 +250,33 @@ a.button:hover, a.button:active {
 	border-left:2px solid $buttonBorderD;
 	color:$black;
 }
-a.icon {
-	text-decoration:none;
+.buttonWrap {
+	display:block;
+	font-size:1.2em;
+	margin:1.5em 0;
+	text-align:center;
+}
+::selection {
+	background: $gLightPurple;
+	}
+::-moz-selection {
+	background: $gLightPurple;
+}
+
+.wrap {
+	margin: 1em auto;
+	max-width:$mobileWidth;
+	min-height:500px;
+	position:relative;
+	@include group();
+}
+header, section, footer {
+	background-color:$bgWhite;
+	margin:2em 0;
+	padding:1em;
+	position:relative;
+	z-index:0;
+	@include group();
 }
 footer {
 	text-align:center;
@@ -328,15 +313,11 @@ footer {
 // 88  88  YbodP  88 YY 88 888888
 //
 .homeDesc {
-	float:right;
 	position:relative;
-	width: 40%;
 	z-index:1000;
-	@include break(mobile) {
-		float:none;
-		text-align: center;
-		width:100%;
-	}
+	float:none;
+	text-align: center;
+	width:100%;
 	h1 {
 		margin:0.2em 0 0;
 		text-align: center;
@@ -351,30 +332,22 @@ footer {
 }
 .logo {
 	height:auto;
-	left:-2em;
-	position:absolute;
-	top:-2em;
-	width:60%;
-	z-index:700;
+	left:1em;
 	opacity: 0.1;
-	width:115%;
+	position:absolute;
+	top:-1em;
+	width:90%;
+	z-index:700;
 }
 .title {
-	float: left;
 	font-size: 1.9em;
 	text-align:center;
 	width:40%;
-	@include break(mobile) {
-		float:none;
-	}
 }
 .secDesc {
 	display: inline-block;
-	width:60%;
-	@include break(mobile) {
-		float:none;
-		width:100%;
-	}
+	float:none;
+	width:100%;
 }
 article.project {
 	@include group();
@@ -392,20 +365,14 @@ article.project {
 	display:inline;
 	float: left;
 	text-align:center;
-	width:40%;
+	width:100%;
 	h3 {
 		margin-top: 1em;
-	}
-	@include break(mobile) {
-		width:100%;
 	}
 }
 .projCont {
 	display:inline;
 	float: left;
 	margin-top:1.3em;
-	width:60%;
-	@include break(mobile) {
-		width:100%;
-	}
+	width:100%;
 }
