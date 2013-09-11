@@ -211,6 +211,7 @@ h4 {
 }
 h5 {
 	font-size: 1.1em;
+	margin: 1.2em 0 0.5em;
 }
 h6 {
 	font-size: 1em;
@@ -259,7 +260,12 @@ a.button:hover, a.button:active {
 ::-moz-selection {
 	background: $gLightPurple;
 }
-
+p {
+	margin: 0.5em 0;
+}
+img {
+	max-width: 100%;
+}
 .wrap {
 	margin: 1em auto;
 	width: $mobileWidth;

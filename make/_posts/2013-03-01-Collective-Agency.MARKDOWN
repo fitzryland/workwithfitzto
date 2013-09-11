@@ -1,5 +1,6 @@
 ---
 title: Collective Agency
+layout: single-make
 img: images/collectiveagency.jpg
 link: http://collectiveagency.co
 ---

@@ -1,0 +1,12 @@
+{% include header.html %}
+  <section>
+  	<h1>{{ page.title }}</h1>
+    <img src="../{{ page.img }}" alt="{{ page.title }}">
+    {{ content }}
+    <a href="{{ page.link }}" target="_blank">{{ page.link }}</a>
+    <h5>Services</h5>
+    <p>{{ page.services }}</p>
+    <h5>Technology</h5>
+    <p>{{ page.tech }}</p>
+  </section>
+{% include footer.html %}

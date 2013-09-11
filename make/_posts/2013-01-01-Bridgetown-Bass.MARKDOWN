@@ -1,5 +1,6 @@
 ---
 title: Bridgetown Bass
+layout: single-make
 img: images/bridgetownbass.jpg
 link: http://bridgetownbass.com
 ---
