@@ -1,5 +1,7 @@
 ---
 title: Work Flow Wish List
+layout: single-document
+excerpt: How it should be.
 ---
 - Everything should be done within Sublime Text 2
 - on change window focus save all "save_on_focus_lost": true

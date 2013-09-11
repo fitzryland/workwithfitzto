@@ -1,6 +1,6 @@
 ---
 title: WordPress Security
-layout: single
+layout: single-document
 excerpt: The whole shabang on things to consider for WordPress security.
 ---
 
@@ -8,12 +8,6 @@ excerpt: The whole shabang on things to consider for WordPress security.
 <ul>
 	<li>Disallow File Editing from Administration <pre>define('DISALLOW_FILE_EDIT', true);</pre></li>
 	<li>Theme Check -> Plugin</li>
-	<li></li>
-	<li></li>
-	<li></li>
-	<li></li>
-	<li></li>
-	<li></li>
 </ul>
 ## WordPress Installation
 <ul>

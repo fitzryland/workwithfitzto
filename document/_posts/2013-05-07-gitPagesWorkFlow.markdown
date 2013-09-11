@@ -1,5 +1,7 @@
 ---
 title: Github Pages Work Flow
+layout: single-document
+excerpt: Oooooo it is so neat...
 ---
 ##Simple Version
 
