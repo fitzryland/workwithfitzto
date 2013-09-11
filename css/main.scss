@@ -315,6 +315,13 @@ header, section, footer {
 	width:90%;
 	z-index:700;
 }
+nav {
+	a {
+		&:not(:last-child) {
+			margin-right: 0.5em;
+		}
+	}
+}
 footer {
 	p {
 		margin-top: 0;
