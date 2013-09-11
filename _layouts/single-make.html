@@ -4,9 +4,13 @@
     <img src="../{{ page.img }}" alt="{{ page.title }}">
     {{ content }}
     <a href="{{ page.link }}" target="_blank">{{ page.link }}</a>
-    <h5>Services</h5>
-    <p>{{ page.services }}</p>
-    <h5>Technology</h5>
-    <p>{{ page.tech }}</p>
+    {% if page.services %}
+      <h5>Services</h5>
+      <p>{{ page.services }}</p>
+    {% endif %}
+    {% if page.tech %}
+      <h5>Technology</h5>
+      <p>{{ page.tech }}</p>
+    {% endif %}
   </section>
 {% include footer.html %}
