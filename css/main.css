@@ -8,9 +8,6 @@ body {
   font: 16px 'Open Sans', sans-serif;
   margin: 0;
   padding: 0; }
-  @media only screen and (max-width: 640px) and (orientation: landscape) {
-    body {
-      font-size: 12px; } }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Libre Baskerville', serif;
@@ -170,13 +167,21 @@ footer p {
   text-align: center;
   text-decoration: none;
   width: 18em; }
+  .project-thumb:hover .project-thumb-image {
+    opacity: 1; }
+  @media only screen and (min-width: 768px) {
+    .project-thumb {
+      float: left;
+      margin-top: 1em;
+      width: 18.5em; }
+      .project-thumb:nth-child(2n-1) {
+        margin-right: 1em; } }
   .project-thumb h3 {
     background-color: rgba(255, 255, 255, 0.5);
+    margin-top: 0;
     padding: 0.5em 0;
     position: relative;
     z-index: 800; }
-  .project-thumb:hover .project-thumb-image {
-    opacity: 1; }
 
 a.project-thumb:link, a.project-thumb:visited {
   border-bottom: none;
