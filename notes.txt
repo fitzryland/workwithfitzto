@@ -2,6 +2,11 @@ TODO
 - correct images
 	- logo image -> needs to be resized
 	- project images
+- Add image meta
+	- dimentions
+	- alt
+	- meta
+
 
 TODD NOTES
 - Project skills listed under link
@@ -27,4 +32,3 @@ NEXT VERSION
 - submit sitemap - webmaster tools
 - add www redirect
 - meta description might be too long
-- add alt and meta text to images

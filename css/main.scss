@@ -463,7 +463,13 @@ a.project-thumb:link, a.project-thumb:visited {
 // `Ybo." 88 88Yb88 dP   `" 88     88__       88__dP dP   Yb 88__dP   88
 // o.`Y8b 88 88 Y88 Yb  "88 88  .o 88""       88"""  Yb   dP 88"Yb    88
 // 8bodP' 88 88  Y8  YboodP 88ood8 888888     88      YbodP  88  Yb   88
-
+.portfolio-image {
+	display: block;
+	margin: 0 auto;
+}
+.portfolio-description, .portfolio-meta {
+	@include full-two-column-obj();
+}
 
 //                                                    ,,        ,,
 //   .g8""8q.                                         db      `7MM
