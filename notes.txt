@@ -1,5 +1,7 @@
 TODO
-
+- correct images
+	- logo image -> needs to be resized
+	- project images
 
 TODD NOTES
 - Project skills listed under link

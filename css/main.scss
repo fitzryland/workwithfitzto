@@ -317,6 +317,11 @@ header, section, footer {
 	z-index:0;
 	@include group();
 }
+header {
+	@include break(tablet-andup) {
+		padding: 1em 0;
+	}
+}
 .header_text {
 	position:relative;
 	z-index:1000;
@@ -326,6 +331,9 @@ header, section, footer {
 	@include break(tablet-andup) {
 		float: right;
 		width: $mobileWidth;
+	}
+	@include break(desktop) {
+		margin-right: 10em;
 	}
 	h1 {
 		margin:0.2em 0 0;
