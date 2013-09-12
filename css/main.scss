@@ -36,8 +36,7 @@ $buttonTextShadow:#f4ebff;
 $mobileWidth: 20em;
 $midWidth: 40em;
 $fullWidth: 60em;
-// media querys shamelessly stolen/marginally adapted from https://gist.github.com/miguelmota/5316827
-$mobile-max-size: 640px !default;
+// media querys shamelessly stolen/marginally adapted from https://gist.github.com/miguelmota/5316817
 $tablet-min-size: 768px !default;
 $desktop-min-size: 979px !default;
 $desktop-large-min-size: 1200px !default;
@@ -54,13 +53,13 @@ $desktop-large-min-size: 1200px !default;
 // media querys shamelessly stolen/marginally adapted from https://gist.github.com/miguelmota/5316827
 @mixin break($media) {
 	@if $media == mobile {
-		@media only screen and (max-width: $mobile-max-size) { @content; }
+		@media only screen and (max-width: $tablet-min-size) { @content; }
 	}
 	@else if $media == mobile-portrait {
-		@media only screen and (max-width: $mobile-max-size) and (orientation: portrait) { @content; }
+		@media only screen and (max-width: $tablet-min-size) and (orientation: portrait) { @content; }
 	}
 	@else if $media == mobile-landscape {
-		@media only screen and (max-width: $mobile-max-size) and (orientation: landscape) { @content; }
+		@media only screen and (max-width: $tablet-min-size) and (orientation: landscape) { @content; }
 	}
 	@else if $media == mobile-tablet {
 		@media only screen and (max-width: $desktop-min-size) { @content; }
@@ -84,6 +83,39 @@ $desktop-large-min-size: 1200px !default;
 		@media only screen and (min-width: $desktop-large-min-size) { @content; }
 	}
 }
+// TODO the nth-child selectors for spacing are weak, because they include the other objects in the parent.
+@mixin midsized-two-column-obj() {
+	@include break(tablet) {
+		float: left;
+		margin-top: 1em;
+		width: 18.5em;
+		&:nth-child(2n-1) {
+			margin-right: 1em;
+		}
+	}
+}
+@mixin full-two-column-obj() {
+	@include break(desktop) {
+		display: block;
+		float: left;
+		margin: 1em 0 0;
+		width: 28.5em;
+		&:nth-child(2n-1) {
+			margin-right: 1em;
+		}
+	}
+}
+@mixin full-four-column-obj() {
+	@include break(desktop) {
+		float: left;
+		margin-top: 1em;
+		width: 13.75em;
+		&:not(:last-child) {
+			margin-right: 1em;
+		}
+	}
+}
+
 
 @mixin group() {
 	&:after {
@@ -107,37 +139,10 @@ $desktop-large-min-size: 1200px !default;
 //   MM   Y  ,     XMX      MM  8M""""""  MM    MM 8MI    MM
 //   MM     ,M   ,V' VA.    MM  YM.    ,  MM    MM `Mb    MM
 // .JMMmmmmMMM .AM.   .MA.  `Mbmo`Mbmmd'.JMML  JMML.`Wbmd"MML.
-// TODO the nth-child selectors for spacing are weak, because they include the other objects in the parent.
-@mixin midsized-two-column-obj() {
-	@include break(tablet) {
-		float: left;
-		margin-top: 1em;
-		width: 18.5em;
-		&:nth-child(2n-1) {
-			margin-right: 1em;
-		}
-	}
+%text-indent {
+	text-indent: 1em;
 }
-@mixin full-two-column-obj() {
-	@include break(desktop) {
-		float: left;
-		margin: 1em 0 0;
-		width: 28.5em;
-		&:nth-child(2n-1) {
-			margin-right: 1em;
-		}
-	}
-}
-@mixin full-four-column-obj() {
-	@include break(desktop) {
-		float: left;
-		margin-top: 1em;
-		width: 13.75em;
-		&:not(:last-child) {
-			margin-right: 1em;
-		}
-	}
-}
+
 //              ,,        ,,
 //   .g8""8q.  *MM        db                    mm
 // .dP'    `YM. MM                              MM
@@ -157,6 +162,13 @@ $desktop-large-min-size: 1200px !default;
 // .     `MM  MM   MM  8M""""""         `MM A'  `MM A'    MM 8MI    MM 8M""""""
 // Mb     dM  MM   MM  YM.    ,          :MM;    :MM;     MM `Mb    MM YM.    ,
 // P"Ybmmd" .JMML. `Mbmo`Mbmmd'           VF      VF    .JMML.`Wbmd"MML.`Mbmmd'
+* {
+	@include break(mobile) {
+		-ms-word-break: break-all;
+		word-break: break-all;
+		word-break: break-word;
+	}
+}
 html {
 	background-color:white;
 	background-image:
@@ -376,11 +388,23 @@ footer {
 	margin: 1.5em 0 1em;
 	text-align: center;
 }
+.section-title, .section-desc {
+	@include full-two-column-obj();
+}
 .section-title {
-	margin-left: 0.5em;
+	padding-left: 0.5em;
 	@include break(tablet-andup) {
-		margin-left: 1.5em;
+		padding-left: 1.5em;
 	}
+	@include break(desktop) {
+		width: 14em;
+		&:nth-child(2n-1) {
+			margin-right: 0;
+		}
+	}
+}
+.section-desc {
+	@extend %text-indent;
 }
 // `7MM"""Mq.
 //   MM   `MM.
@@ -397,11 +421,6 @@ footer {
 // 888888 Yb   dP 88YbdP88 88""
 // 88  88  YbodP  88 YY 88 888888
 //
-.home_section-desc {
-	display: inline-block;
-	float:none;
-	width:100%;
-}
 .project-thumb {
 	display: block;
 	height: 13em;
@@ -458,7 +477,17 @@ a.project-thumb:link, a.project-thumb:visited {
 // `Ybo." 88 88Yb88 dP   `" 88     88__        8I  Yb dP   Yb dP   `"
 // o.`Y8b 88 88 Y88 Yb  "88 88  .o 88""        8I  dY Yb   dP Yb
 // 8bodP' 88 88  Y8  YboodP 88ood8 888888     8888Y"   YbodP   YboodP
-
+.document-content {
+	@include break(desktop) {
+		width: $midWidth;
+	}
+}
+.latest-posts-title {
+	@include break(tablet) {
+		float: left;
+		width: 8.7em;
+	}
+}
 // .dP"Y8 88 88b 88  dP""b8 88     888888     88""Yb  dP"Yb  88""Yb 888888
 // `Ybo." 88 88Yb88 dP   `" 88     88__       88__dP dP   Yb 88__dP   88
 // o.`Y8b 88 88 Y88 Yb  "88 88  .o 88""       88"""  Yb   dP 88"Yb    88
@@ -469,6 +498,9 @@ a.project-thumb:link, a.project-thumb:visited {
 }
 .portfolio-description, .portfolio-meta {
 	@include full-two-column-obj();
+}
+.portfolio-description {
+	@extend %text-indent;
 }
 
 //                                                    ,,        ,,
@@ -481,4 +513,7 @@ a.project-thumb:link, a.project-thumb:visited {
 //   `"bmmd"'        W     `Mbmmd'.JMML.   .JMML.   .JMML.`Wbmd"MML.`Mbmmd' M9mmmP'
 .center {
 	text-align: center;
+}
+.clear {
+	clear: both;
 }

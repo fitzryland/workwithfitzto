@@ -1,3 +1,12 @@
+.section-desc, .portfolio-description {
+  text-indent: 1em; }
+
+@media only screen and (max-width: 768px) {
+  * {
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word; } }
+
 html {
   background-color: white;
   background-image: -webkit-repeating-linear-gradient(45deg, rgba(224, 204, 255, 0.5), rgba(224, 204, 255, 0.5) 10px, rgba(255, 255, 255, 0.5) 10px, rgba(255, 255, 255, 0.5) 15px, rgba(20, 0, 51, 0.1) 15px, rgba(20, 0, 51, 0.1) 25px, rgba(224, 204, 255, 0.5) 25px, rgba(224, 204, 255, 0.5) 30px, rgba(20, 0, 51, 0.1) 30px, rgba(20, 0, 51, 0.1) 45px, rgba(255, 255, 255, 0.5) 45px, rgba(255, 255, 255, 0.5) 100px), -webkit-repeating-linear-gradient(135deg, rgba(224, 204, 255, 0.5), rgba(224, 204, 255, 0.5) 10px, rgba(255, 255, 255, 0.5) 10px, rgba(255, 255, 255, 0.5) 15px, rgba(20, 0, 51, 0.1) 15px, rgba(20, 0, 51, 0.1) 25px, rgba(255, 255, 255, 0.5) 25px, rgba(255, 255, 255, 0.5) 30px, rgba(20, 0, 51, 0.1) 30px, rgba(20, 0, 51, 0.1) 45px, rgba(255, 255, 255, 0.5) 45px, rgba(255, 255, 255, 0.5) 100px);
@@ -159,16 +168,25 @@ footer p {
   margin: 1.5em 0 1em;
   text-align: center; }
 
+@media only screen and (min-width: 979px) {
+  .section-title, .section-desc {
+    display: block;
+    float: left;
+    margin: 1em 0 0;
+    width: 28.5em; }
+    .section-title:nth-child(2n-1), .section-desc:nth-child(2n-1) {
+      margin-right: 1em; } }
+
 .section-title {
-  margin-left: 0.5em; }
+  padding-left: 0.5em; }
   @media only screen and (min-width: 768px) {
     .section-title {
-      margin-left: 1.5em; } }
-
-.home_section-desc {
-  display: inline-block;
-  float: none;
-  width: 100%; }
+      padding-left: 1.5em; } }
+  @media only screen and (min-width: 979px) {
+    .section-title {
+      width: 14em; }
+      .section-title:nth-child(2n-1) {
+        margin-right: 0; } }
 
 .project-thumb {
   display: block;
@@ -233,6 +251,7 @@ a.project-thumb:link, a.project-thumb:visited {
       margin-right: 1em; } }
 @media only screen and (min-width: 979px) {
   .home_post {
+    display: block;
     float: left;
     margin: 1em 0 0;
     width: 28.5em; }
@@ -243,12 +262,22 @@ a.project-thumb:link, a.project-thumb:visited {
 .home_post p {
   margin-top: 0.5em; }
 
+@media only screen and (min-width: 979px) {
+  .document-content {
+    width: 40em; } }
+
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .latest-posts-title {
+    float: left;
+    width: 8.7em; } }
+
 .portfolio-image {
   display: block;
   margin: 0 auto; }
 
 @media only screen and (min-width: 979px) {
   .portfolio-description, .portfolio-meta {
+    display: block;
     float: left;
     margin: 1em 0 0;
     width: 28.5em; }
@@ -257,3 +286,6 @@ a.project-thumb:link, a.project-thumb:visited {
 
 .center {
   text-align: center; }
+
+.clear {
+  clear: both; }
