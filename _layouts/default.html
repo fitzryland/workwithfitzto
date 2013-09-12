@@ -1,6 +1,6 @@
 {% include header.html %}
     <section id="portfolio">
-        <h2 class="home_section-title">Portfolio</h2>
+        <h2 class="section-title">Portfolio</h2>
         <p class="home_section-desc">To give you a brief idea of what I've been up to recently, here are three websites that I completed in 2013. Each represents a passion of mine -- professional or otherwise -- and are built using the latest web standards on WordPress.</p>
         {% for project in site.categories.make %}
             <a href="{{ project.url }}" class="project-thumb">
@@ -10,7 +10,7 @@
         {% endfor %}
     </section>
     <section id="documentation">
-        <h2 class="home_section-title">Documentation</h2>
+        <h2 class="section-title">Documentation</h2>
         <p class="home_section-desc">This is where I will be documenting my work in process. I do it to inform other professionals and so that other professionals can tell me why I am wrong. We all learn! I am also creating helpful material for my clients.</p>
         {% for post in site.categories.document %}
         <div class="home_post">

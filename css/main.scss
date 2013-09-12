@@ -339,6 +339,12 @@ footer {
 .footer_social {
 	text-align: center;
 }
+.section-title {
+	margin-left: 0.5em;
+	@include break(tablet-andup) {
+		margin-left: 1.5em;
+	}
+}
 // `7MM"""Mq.
 //   MM   `MM.
 //   MM   ,M9 ,6"Yb.  .P"Ybmmm .gP"Ya  ,pP"Ybd
@@ -354,10 +360,6 @@ footer {
 // 888888 Yb   dP 88YbdP88 88""
 // 88  88  YbodP  88 YY 88 888888
 //
-.home_section-title {
-	text-align:center;
-	width:40%;
-}
 .home_section-desc {
 	display: inline-block;
 	float:none;
