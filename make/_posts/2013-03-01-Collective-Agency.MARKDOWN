@@ -1,4 +1,5 @@
 ---
+published: false
 title: Collective Agency
 layout: single-make
 img: images/collectiveagency.jpg
