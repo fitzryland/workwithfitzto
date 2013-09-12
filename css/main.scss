@@ -39,7 +39,6 @@ $fullWidth: 60em;
 // media querys shamelessly stolen/marginally adapted from https://gist.github.com/miguelmota/5316827
 $mobile-max-size: 640px !default;
 $tablet-min-size: 768px !default;
-$tablet-max-size: 979px !default;
 $desktop-min-size: 979px !default;
 $desktop-large-min-size: 1200px !default;
 
@@ -64,19 +63,19 @@ $desktop-large-min-size: 1200px !default;
 		@media only screen and (max-width: $mobile-max-size) and (orientation: landscape) { @content; }
 	}
 	@else if $media == mobile-tablet {
-		@media only screen and (max-width: $tablet-max-size) { @content; }
+		@media only screen and (max-width: $desktop-min-size) { @content; }
 	}
 	@else if $media == tablet {
-		@media only screen and (min-width: $tablet-min-size) and (max-width: $tablet-max-size) { @content; }
+		@media only screen and (min-width: $tablet-min-size) and (max-width: $desktop-min-size) { @content; }
 	}
 	@else if $media == tablet-andup {
 		@media only screen and (min-width: $tablet-min-size) { @content; }
 	}
 	@else if $media == tablet-landscape {
-		@media only screen and (min-width: $tablet-max-size) and (orientation: landscape) { @content; }
+		@media only screen and (min-width: $desktop-min-size) and (orientation: landscape) { @content; }
 	}
 	@else if $media == tablet-desktop {
-		@media only screen and (min-width: $tablet-max-size) { @content; }
+		@media only screen and (min-width: $desktop-min-size) { @content; }
 	}
 	@else if $media == desktop {
 		@media only screen and (min-width: $desktop-min-size) { @content; }
@@ -192,9 +191,11 @@ html {
 body {
 	color:$black;
 	font:16px 'Open Sans', sans-serif;
-	font-size:16px;
 	margin:0;
 	padding:0;
+	@include break(mobile-landscape) {
+		font-size: 12px;
+	}
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Libre Baskerville', serif;
@@ -272,12 +273,12 @@ img {
 	min-height: 500px;
 	position: relative;
 	@include group();
-	// @include break(tablet-andup) {
-	// 	width: $midWidth;
-	// }
-	// @include break(desktop) {
-	// 	width: $fullWidth;
-	// }
+	@include break(tablet-andup) {
+		width: $midWidth;
+	}
+	@include break(desktop) {
+		width: $fullWidth;
+	}
 }
 header, section, footer {
 	background-color:$bgWhite;
@@ -293,9 +294,12 @@ header, section, footer {
 	float:none;
 	text-align: center;
 	width:100%;
+	@include break(tablet-andup) {
+		float: right;
+		width: $mobileWidth;
+	}
 	h1 {
 		margin:0.2em 0 0;
-		text-align: center;
 		font-size: 2.7em;
 	}
 	h2 {
@@ -303,7 +307,6 @@ header, section, footer {
 	}
 	h3 {
 		font-size: 1.3em;
-		text-align: center;
 	}
 }
 .header_logo {
@@ -314,6 +317,11 @@ header, section, footer {
 	top:-1em;
 	width:90%;
 	z-index:700;
+	@include break(tablet-andup) {
+		left: -1em;
+		opacity: 1;
+		width: $mobileWidth + 1em;
+	}
 }
 nav {
 	a {

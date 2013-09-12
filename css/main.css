@@ -6,9 +6,11 @@ html {
 body {
   color: #20005c;
   font: 16px 'Open Sans', sans-serif;
-  font-size: 16px;
   margin: 0;
   padding: 0; }
+  @media only screen and (max-width: 640px) and (orientation: landscape) {
+    body {
+      font-size: 12px; } }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Libre Baskerville', serif;
@@ -93,6 +95,12 @@ img {
     content: "";
     display: table;
     clear: both; }
+  @media only screen and (min-width: 768px) {
+    .wrap {
+      width: 40em; } }
+  @media only screen and (min-width: 979px) {
+    .wrap {
+      width: 60em; } }
 
 header, section, footer {
   background-color: rgba(255, 255, 255, 0.8);
@@ -111,15 +119,17 @@ header, section, footer {
   float: none;
   text-align: center;
   width: 100%; }
+  @media only screen and (min-width: 768px) {
+    .header_text {
+      float: right;
+      width: 20em; } }
   .header_text h1 {
     margin: 0.2em 0 0;
-    text-align: center;
     font-size: 2.7em; }
   .header_text h2 {
     font-size: 1.4em; }
   .header_text h3 {
-    font-size: 1.3em;
-    text-align: center; }
+    font-size: 1.3em; }
 
 .header_logo {
   height: auto;
@@ -129,6 +139,11 @@ header, section, footer {
   top: -1em;
   width: 90%;
   z-index: 700; }
+  @media only screen and (min-width: 768px) {
+    .header_logo {
+      left: -1em;
+      opacity: 1;
+      width: 21em; } }
 
 nav a:not(:last-child) {
   margin-right: 0.5em; }
