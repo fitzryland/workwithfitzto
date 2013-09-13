@@ -12,6 +12,8 @@ TODD NOTES
 - Project skills listed under link
 - make the face cooler -> maybe some sparkle in it
 	- svg mask?
+- update <title> correctly
+- javascript linter, minifier, etc.
 
 FITZ NOTES
 - According to analytics, 83% of visitors are on desktop.

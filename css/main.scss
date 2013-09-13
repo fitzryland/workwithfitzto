@@ -330,7 +330,7 @@ header, section, footer {
 	@include group();
 }
 header {
-	@include break(tablet-andup) {
+	@include break(tablet) {
 		padding: 1em 0;
 	}
 }
@@ -345,7 +345,7 @@ header {
 		width: $mobileWidth;
 	}
 	@include break(desktop) {
-		margin-right: 10em;
+		width: 28.5em;
 	}
 	h1 {
 		margin:0.2em 0 0;
@@ -370,6 +370,9 @@ header {
 		left: -1em;
 		opacity: 1;
 		width: $mobileWidth + 1em;
+	}
+	@include break(desktop) {
+		width: auto;
 	}
 }
 nav {
@@ -449,7 +452,7 @@ a.project-thumb:link, a.project-thumb:visited {
 	text-shadow: 0em 0em 0.5em white;
 }
 .project-thumb-image {
-	background-position: no-repeat center center fixed;
+	background-position: center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;

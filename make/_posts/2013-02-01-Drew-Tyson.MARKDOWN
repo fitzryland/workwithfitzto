@@ -1,7 +1,14 @@
 ---
 title: Drew Tyson
 layout: single-make
-img: images/drewtyson.jpg
+# image name format
+# name-size.jpg
+# eg drewtyson-small.jpg
+img: drewtyson
+imgAlt: drewtyson.com
+# small img width = 288
+# medium img width = 608
+# large img width = 928
 link: http://drewtyson.com
 services: Custom WordPress Theme Design &amp; Development
 tech: WordPress, PHP, MySQL, CSS3, HTML5
