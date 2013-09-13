@@ -209,20 +209,9 @@ footer p {
   width: 18em; }
   .project-thumb:hover .project-thumb-image {
     opacity: 1; }
-  @media only screen and (min-width: 768px) and (max-width: 979px) {
-    .project-thumb {
-      float: left;
-      margin-top: 1em;
-      width: 18.5em; }
-      .project-thumb:nth-child(2n-1) {
-        margin-right: 1em; } }
   @media only screen and (min-width: 979px) {
     .project-thumb {
-      float: left;
-      margin-top: 1em;
-      width: 13.75em; }
-      .project-thumb:not(:last-child) {
-        margin-right: 1em; } }
+      height: 19.5em; } }
   .project-thumb h3 {
     background-color: rgba(255, 255, 255, 0.5);
     margin-top: 0;
@@ -256,6 +245,22 @@ a.project-thumb:hover, a.project-thumb:active {
   -o-transition: opacity 0.2s ease;
   -ms-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease; }
+
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .home .project-thumb {
+    float: left;
+    margin-top: 1em;
+    width: 18.5em; }
+    .home .project-thumb:nth-child(2n-1) {
+      margin-right: 1em; } }
+@media only screen and (min-width: 979px) {
+  .home .project-thumb {
+    display: block;
+    float: left;
+    margin: 1em 0 0;
+    width: 28.5em; }
+    .home .project-thumb:nth-child(2n-1) {
+      margin-right: 1em; } }
 
 @media only screen and (min-width: 768px) and (max-width: 979px) {
   .home_post {
@@ -297,6 +302,26 @@ a.project-thumb:hover, a.project-thumb:active {
     margin: 1em 0 0;
     width: 28.5em; }
     .portfolio-description:nth-child(2n-1), .portfolio-meta:nth-child(2n-1) {
+      margin-right: 1em; } }
+
+@media only screen and (min-width: 768px) {
+  .make h2.section-title {
+    float: left;
+    width: 15.5em; } }
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .make .project-thumb {
+    float: left;
+    margin-top: 1em;
+    width: 18.5em; }
+    .make .project-thumb:nth-child(2n-1) {
+      margin-right: 1em; } }
+@media only screen and (min-width: 979px) {
+  .make .project-thumb {
+    display: block;
+    float: left;
+    margin: 1em 0 0;
+    width: 28.5em; }
+    .make .project-thumb:nth-child(2n-1) {
       margin-right: 1em; } }
 
 .center {

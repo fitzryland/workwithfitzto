@@ -25,4 +25,15 @@
       {% endif %}
     </div>
   </section>
+  <section>
+    <h2 class="section-title">Portfolio</h2>
+    {% for project in site.categories.make %}
+      {% if project.title != page.title %}
+      <a href="{{ project.url }}" class="project-thumb">
+          <h3>{{ project.title }}</h3>
+          <div class="project-thumb-image" style="background-image:url(../images/{{ project.img }}-small.jpg);"></div>
+      </a>
+      {% endif %}
+    {% endfor %}
+  </section>
 {% include footer.html %}

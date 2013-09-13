@@ -1,5 +1,11 @@
 {% include head.html %}
-    <body {% if page.bodyClass %} class="{{ page.bodyClass }}" {% endif %}>
+    {% assign pageCat = page.categories | downcase | replace: ' ', '-' %}
+    {% if pageCat != '' %}
+        {% assign bodyClass = pageCat %}
+    {% else %}
+        {% assign bodyClass = 'home' %}
+    {% endif %}
+    <body {% if bodyClass %} class="{{ bodyClass }}" {% endif %}>
         <div class="wrap">
             <header>
                 <img src="{{site.url_root}}/images/logo_0_1.png" width="456" height="561" alt="Fitz" class="header_logo" />

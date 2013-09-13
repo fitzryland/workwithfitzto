@@ -415,21 +415,6 @@ footer {
 		width: 28.3em;
 	}
 }
-// `7MM"""Mq.
-//   MM   `MM.
-//   MM   ,M9 ,6"Yb.  .P"Ybmmm .gP"Ya  ,pP"Ybd
-//   MMmmdM9 8)   MM :MI  I8  ,M'   Yb 8I   `"
-//   MM       ,pm9MM  WmmmP"  8M"""""" `YMMMa.
-//   MM      8M   MM 8M       YM.    , L.   I8
-// .JMML.    `Moo9^Yo.YMMMMMb  `Mbmmd' M9mmmP'
-//                   6'     dP
-//                   Ybmmmd'
-//
-// 88  88  dP"Yb  8b    d8 888888
-// 88  88 dP   Yb 88b  d88 88__
-// 888888 Yb   dP 88YbdP88 88""
-// 88  88  YbodP  88 YY 88 888888
-//
 .project-thumb {
 	display: block;
 	height: 13em;
@@ -443,8 +428,9 @@ footer {
 			opacity: 1;
 		}
 	}
-	@include midsized-two-column-obj();
-	@include full-four-column-obj();
+	@include break(desktop) {
+		height: 19.5em;
+	}
 	h3 {
 		background-color: $white;
 		margin-top: 0;
@@ -475,6 +461,28 @@ a.project-thumb:hover, a.project-thumb:active {
 	top: 0;
 	z-index: 200;
 	@include transition(opacity);
+}
+// `7MM"""Mq.
+//   MM   `MM.
+//   MM   ,M9 ,6"Yb.  .P"Ybmmm .gP"Ya  ,pP"Ybd
+//   MMmmdM9 8)   MM :MI  I8  ,M'   Yb 8I   `"
+//   MM       ,pm9MM  WmmmP"  8M"""""" `YMMMa.
+//   MM      8M   MM 8M       YM.    , L.   I8
+// .JMML.    `Moo9^Yo.YMMMMMb  `Mbmmd' M9mmmP'
+//                   6'     dP
+//                   Ybmmmd'
+//
+// 88  88  dP"Yb  8b    d8 888888
+// 88  88 dP   Yb 88b  d88 88__
+// 888888 Yb   dP 88YbdP88 88""
+// 88  88  YbodP  88 YY 88 888888
+//
+.home {
+	.project-thumb {
+		@include midsized-two-column-obj();
+		//@include full-four-column-obj();
+		@include full-two-column-obj();
+	}
 }
 .home_post {
 	@include midsized-two-column-obj();
@@ -515,7 +523,18 @@ a.project-thumb:hover, a.project-thumb:active {
 .portfolio-description {
 	@extend %text-indent;
 }
-
+.make {
+	h2.section-title {
+		@include break(tablet-andup) {
+			float: left;
+			width: 15.5em;
+		}
+	}
+	.project-thumb {
+		@include midsized-two-column-obj();
+		@include full-two-column-obj();
+	}
+}
 //                                                    ,,        ,,
 //   .g8""8q.                                         db      `7MM
 // .dP'    `YM.                                                 MM
