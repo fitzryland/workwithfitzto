@@ -346,7 +346,8 @@ header {
 		width: $mobileWidth;
 	}
 	@include break(desktop) {
-		width: 28.5em;
+		font-size: 20px;
+		width: 25em;
 	}
 	h1 {
 		margin:0.2em 0 0;
@@ -373,6 +374,7 @@ header {
 		width: $mobileWidth + 1em;
 	}
 	@include break(desktop) {
+		top: -7em;
 		width: auto;
 	}
 }
@@ -401,7 +403,7 @@ footer {
 		padding-left: 1.5em;
 	}
 	@include break(desktop) {
-		width: 14em;
+		width: 15.6em;
 		&:nth-child(2n-1) {
 			margin-right: 0;
 		}
@@ -409,6 +411,9 @@ footer {
 }
 .section-desc {
 	@extend %text-indent;
+	@include break(desktop) {
+		width: 28.3em;
+	}
 }
 // `7MM"""Mq.
 //   MM   `MM.

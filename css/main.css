@@ -137,7 +137,8 @@ header, section, footer {
       width: 20em; } }
   @media only screen and (min-width: 979px) {
     .header_text {
-      width: 28.5em; } }
+      font-size: 20px;
+      width: 25em; } }
   .header_text h1 {
     margin: 0.2em 0 0;
     font-size: 2.7em; }
@@ -161,6 +162,7 @@ header, section, footer {
       width: 21em; } }
   @media only screen and (min-width: 979px) {
     .header_logo {
+      top: -7em;
       width: auto; } }
 
 nav a:not(:last-child) {
@@ -189,9 +191,13 @@ footer p {
       padding-left: 1.5em; } }
   @media only screen and (min-width: 979px) {
     .section-title {
-      width: 14em; }
+      width: 15.6em; }
       .section-title:nth-child(2n-1) {
         margin-right: 0; } }
+
+@media only screen and (min-width: 979px) {
+  .section-desc {
+    width: 28.3em; } }
 
 .project-thumb {
   display: block;
