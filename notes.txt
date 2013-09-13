@@ -14,7 +14,8 @@ TODD NOTES
 	- svg mask?
 
 FITZ NOTES
-
+- According to analytics, 83% of visitors are on desktop.
+	- desktop view is most important!
 
 
 
