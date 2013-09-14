@@ -1,12 +1,13 @@
 TODO
 - correct images
 	- logo image -> needs to be resized
-	- project images
+	- project images -> desctop view images are stretched -> need to be replaced with correct size
 - Add image meta
 	- dimentions
 	- alt
 	- meta
-
+- single-make -> section-desc needs better alignment with title
+- add smooth scroll
 
 TODD NOTES
 - Project skills listed under link

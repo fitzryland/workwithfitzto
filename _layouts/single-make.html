@@ -2,26 +2,31 @@
   <section>
   	<h1 class="section-title">{{ page.title }}</h1>
     <p class="clear"></p>
-    <span data-picture data-alt="{{ page.imgAlt }}">
+    <span data-picture data-alt="{{ page.imgAlt }}" class="portfolio-image">
       <span data-src="../images/{{ page.img }}-small.jpg"></span>
       <span data-src="../images/{{ page.img }}-medium.jpg" data-media="(min-width: 768px)"></span>
       <span data-src="../images/{{ page.img }}-large.jpg" data-media="(min-width: 979px)"></span>
 
       <noscript><img src="../images/{{ page.img }}-small.jpg" alt="{{ page.imgAlt }}"></noscript>
     </span>
-    <!-- <img src="../images/{{ page.img }}.jpg" alt="{{ page.title }}" class="portfolio-image"> -->
     <div class="portfolio-description">
       {{ content }}
     </div>
     <div class="portfolio-meta">
-      <a href="{{ page.link }}" target="_blank">{{ page.link }}</a>
+      <p class="portfolio-link">
+        <a href="{{ page.link }}" target="_blank">{{ page.link }}</a>
+      </p>
       {% if page.services %}
-        <h5>Services</h5>
-        <p>{{ page.services }}</p>
+        <div class="portfolio-services">
+          <h5>Services</h5>
+          <p>{{ page.services }}</p>
+        </div>
       {% endif %}
       {% if page.tech %}
+      <div class="portfolio-technology">
         <h5>Technology</h5>
         <p>{{ page.tech }}</p>
+      </div>
       {% endif %}
     </div>
   </section>
