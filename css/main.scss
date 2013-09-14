@@ -142,18 +142,6 @@ $desktop-large-min-size: 1200px !default;
 %text-indent {
 	text-indent: 1em;
 }
-
-//              ,,        ,,
-//   .g8""8q.  *MM        db                    mm
-// .dP'    `YM. MM                              MM
-// dM'      `MM MM,dMMb.`7MM  .gP"Ya   ,p6"bo mmMMmm ,pP"Ybd
-// MM        MM MM    `Mb MM ,M'   Yb 6M'  OO   MM   8I   `"
-// MM.      ,MP MM     M8 MM 8M"""""" 8M        MM   `YMMMa.
-// `Mb.    ,dP' MM.   ,M9 MM YM.    , YM.    ,  MM   L.   I8
-//   `"bmmd"'   P^YbmdP'  MM  `Mbmmd'  YMbmd'   `MbmoM9mmmP'
-//                     QO MP
-//                     `bmP
-
 //            ,,                                          ,,        ,,
 //  .M"""bgd  db   mm               `7MMF'     A     `7MF'db      `7MM
 // ,MI    "Y       MM                 `MA     ,MA     ,V            MM
@@ -268,35 +256,6 @@ a:link, a:visited {
 a:hover, a:active {
 	color:$purple;
 }
-a.button:link, a.button:visited {
-	background-image: -webkit-linear-gradient(-80deg, $buttonL, $buttonD);
-	background-image: -moz-linear-gradient(-80deg, $buttonL, $buttonD);
-	background-image: linear-gradient(-80deg, $buttonL, $buttonD);
-	border-top:2px solid $buttonBorderL;
-	border-right:2px solid $buttonBorderD;
-	border-bottom:2px solid $buttonBorderD;
-	border-left:2px solid $buttonBorderL;
-	border-radius:2em;
-	color:$black;
-	padding: 1em;
-	text-decoration:none;
-}
-a.button:hover, a.button:active {
-	background-image: -webkit-linear-gradient(-80deg, $buttonD, $buttonL);
-	background-image: -moz-linear-gradient(-80deg, $buttonD, $buttonL);
-	background-image: linear-gradient(-80deg, $buttonD, $buttonL);
-	border-top:2px solid $buttonBorderD;
-	border-right:2px solid $buttonBorderL;
-	border-bottom:2px solid $buttonBorderL;
-	border-left:2px solid $buttonBorderD;
-	color:$black;
-}
-.buttonWrap {
-	display:block;
-	font-size:1.2em;
-	margin:1.5em 0;
-	text-align:center;
-}
 ::selection {
 	background: $gLightPurple;
 	}
@@ -398,6 +357,7 @@ footer {
 	@include full-two-column-obj();
 }
 .section-title {
+	margin-bottom: 1em;
 	padding-left: 0.5em;
 	@include break(tablet) {
 		float: left;
@@ -488,7 +448,6 @@ a.project-thumb:hover, a.project-thumb:active {
 .home {
 	.project-thumb {
 		@include midsized-two-column-obj();
-		//@include full-four-column-obj();
 		@include full-two-column-obj();
 	}
 }
@@ -525,6 +484,7 @@ h1.section-title {
 // 8bodP' 88 88  Y8  YboodP 88ood8 888888     88      YbodP  88  Yb   88
 .portfolio-image {
 	img {
+		border: 0.2em solid $gDarkPurple;
 		margin-bottom: 1em;
 	}
 }

@@ -53,35 +53,6 @@ a:link, a:visited {
 a:hover, a:active {
   color: #6402ff; }
 
-a.button:link, a.button:visited {
-  background-image: -webkit-linear-gradient(-80deg, #dac1ff, #7e59b5);
-  background-image: -moz-linear-gradient(-80deg, #dac1ff, #7e59b5);
-  background-image: linear-gradient(-80deg, #dac1ff, #7e59b5);
-  border-top: 2px solid #9f78d9;
-  border-right: 2px solid #7b4ac2;
-  border-bottom: 2px solid #7b4ac2;
-  border-left: 2px solid #9f78d9;
-  border-radius: 2em;
-  color: #20005c;
-  padding: 1em;
-  text-decoration: none; }
-
-a.button:hover, a.button:active {
-  background-image: -webkit-linear-gradient(-80deg, #7e59b5, #dac1ff);
-  background-image: -moz-linear-gradient(-80deg, #7e59b5, #dac1ff);
-  background-image: linear-gradient(-80deg, #7e59b5, #dac1ff);
-  border-top: 2px solid #7b4ac2;
-  border-right: 2px solid #9f78d9;
-  border-bottom: 2px solid #9f78d9;
-  border-left: 2px solid #7b4ac2;
-  color: #20005c; }
-
-.buttonWrap {
-  display: block;
-  font-size: 1.2em;
-  margin: 1.5em 0;
-  text-align: center; }
-
 ::selection {
   background: rgba(224, 204, 255, 0.5); }
 
@@ -185,6 +156,7 @@ footer p {
       margin-right: 1em; } }
 
 .section-title {
+  margin-bottom: 1em;
   padding-left: 0.5em; }
   @media only screen and (min-width: 768px) and (max-width: 979px) {
     .section-title {
@@ -307,6 +279,7 @@ h1.section-title {
   width: auto; }
 
 .portfolio-image img {
+  border: 0.2em solid rgba(20, 0, 51, 0.1);
   margin-bottom: 1em; }
 
 .portfolio-link {
