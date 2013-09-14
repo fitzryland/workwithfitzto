@@ -5,7 +5,12 @@
         {% for project in site.categories.make %}
             <a href="{{ project.url }}" class="project-thumb">
                 <h3>{{ project.title }}</h3>
-                <div class="project-thumb-image" style="background-image:url(../images/{{ project.img }}-small.jpg);"></div>
+                <span data-picture data-alt="{{ project.imgAlt }}" class="project-thumb-image">
+                  <span data-src="../images/{{ project.img }}-small.jpg"></span>
+                  <span data-src="../images/{{ project.img }}-medium.jpg" data-media="(min-width: 768px)"></span>
+
+                  <noscript><img src="../images/{{ project.img }}-small.jpg" alt="{{ project.imgAlt }}"></noscript>
+                </span>
             </a>
         {% endfor %}
     </section>

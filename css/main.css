@@ -212,7 +212,8 @@ footer p {
 
 .project-thumb {
   display: block;
-  height: 13em;
+  height: 12.4em;
+  overflow: hidden;
   margin-top: 1em;
   position: relative;
   text-align: center;
@@ -220,6 +221,9 @@ footer p {
   width: 18em; }
   .project-thumb:hover .project-thumb-image {
     opacity: 1; }
+  @media only screen and (min-width: 768px) and (max-width: 979px) {
+    .project-thumb {
+      height: 12.7em; } }
   @media only screen and (min-width: 979px) {
     .project-thumb {
       height: 19.5em; } }
@@ -239,11 +243,6 @@ a.project-thumb:hover, a.project-thumb:active {
   border-color: rgba(224, 204, 255, 0.5); }
 
 .project-thumb-image {
-  background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   bottom: 0;
   left: 0;
   opacity: 0.5;
@@ -256,6 +255,9 @@ a.project-thumb:hover, a.project-thumb:active {
   -o-transition: opacity 0.2s ease;
   -ms-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease; }
+  .project-thumb-image img {
+    height: auto;
+    width: 100%; }
 
 @media only screen and (min-width: 768px) and (max-width: 979px) {
   .home .project-thumb {

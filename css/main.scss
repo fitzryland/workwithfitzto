@@ -422,7 +422,8 @@ footer {
 }
 .project-thumb {
 	display: block;
-	height: 13em;
+	height: 12.4em;
+	overflow: hidden;
 	margin-top: 1em;
 	position: relative;
 	text-align: center;
@@ -432,6 +433,9 @@ footer {
 		.project-thumb-image {
 			opacity: 1;
 		}
+	}
+	@include break(tablet) {
+		height: 12.7em;
 	}
 	@include break(desktop) {
 		height: 19.5em;
@@ -453,11 +457,6 @@ a.project-thumb:hover, a.project-thumb:active {
 	border-color: $gLightPurple;
 }
 .project-thumb-image {
-	background-position: center;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
 	bottom: 0;
 	left: 0;
 	opacity: 0.5;
@@ -466,6 +465,10 @@ a.project-thumb:hover, a.project-thumb:active {
 	top: 0;
 	z-index: 200;
 	@include transition(opacity);
+	img {
+		height: auto;
+		width: 100%;
+	}
 }
 // `7MM"""Mq.
 //   MM   `MM.
