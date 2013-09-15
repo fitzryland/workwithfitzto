@@ -349,6 +349,13 @@ footer {
 		margin-top: 0;
 	}
 }
+.footer_email {
+	text-align: center;
+	@include break(tablet-andup) {
+		clear: both;
+		padding-top: 0.5em;
+	}
+}
 .footer_social {
 	margin: 1.5em 0 1em;
 	text-align: center;
@@ -504,6 +511,9 @@ h1.section-title {
 }
 .portfolio-description {
 	@extend %text-indent;
+	@include break(desktop) {
+		padding-right: 1em;
+	}
 	p {
 		&:first-child {
 			@include break(desktop) {
