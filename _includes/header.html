@@ -5,7 +5,7 @@
     {% else %}
         {% assign bodyClass = 'home' %}
     {% endif %}
-    <body {% if bodyClass %} class="{{ bodyClass }}" {% endif %}>
+    <body {% if bodyClass %} class="{{ page.categories }}" {% endif %}>
         <!-- {{ page.categories }} -->
         <div class="wrap">
             <header>
