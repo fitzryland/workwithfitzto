@@ -1,13 +1,12 @@
 {% include head.html %}
-    {% assign pageCat = page.categories | downcase | replace "[", "" | replace "]" "" | replace """ "" | replace: ' ', '-' %}
-    <!-- page.categories: {{ page.categories }} -->
-    <!-- pageCat: {{ pageCat }} -->
+    {% assign pageCat = page.categories | downcase | replace: ' ', '-' %}
     {% if pageCat != '' %}
         {% assign bodyClass = pageCat %}
     {% else %}
         {% assign bodyClass = 'home' %}
     {% endif %}
     <body {% if bodyClass %} class="{{ bodyClass }}" {% endif %}>
+        <!-- {{ page.categories }} -->
         <div class="wrap">
             <header>
 
