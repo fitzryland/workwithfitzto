@@ -455,7 +455,7 @@ a.project-thumb:hover, a.project-thumb:active {
 // 888888 Yb   dP 88YbdP88 88""
 // 88  88  YbodP  88 YY 88 888888
 //
-.home {
+.default {
 	.project-thumb {
 		@include midsized-two-column-obj();
 		@include full-two-column-obj();
@@ -528,7 +528,7 @@ h1.section-title {
 .portfolio-services, .portfolio-technology {
 	@include midsized-two-column-obj();
 }
-.make {
+.single-make {
 	.section-title {
 		float: none;
 		width: auto;

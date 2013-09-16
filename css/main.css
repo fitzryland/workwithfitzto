@@ -242,19 +242,19 @@ a.project-thumb:hover, a.project-thumb:active {
     width: 100%; }
 
 @media only screen and (min-width: 768px) and (max-width: 979px) {
-  .home .project-thumb {
+  .default .project-thumb {
     float: left;
     margin-top: 1em;
     width: 18.5em; }
-    .home .project-thumb:nth-child(2n-1) {
+    .default .project-thumb:nth-child(2n-1) {
       margin-right: 1em; } }
 @media only screen and (min-width: 979px) {
-  .home .project-thumb {
+  .default .project-thumb {
     display: block;
     float: left;
     margin: 1em 0 0;
     width: 28.5em; }
-    .home .project-thumb:nth-child(2n-1) {
+    .default .project-thumb:nth-child(2n-1) {
       margin-right: 1em; } }
 
 @media only screen and (min-width: 768px) and (max-width: 979px) {
@@ -327,30 +327,30 @@ h1.section-title {
     .portfolio-services:nth-child(2n-1), .portfolio-technology:nth-child(2n-1) {
       margin-right: 1em; } }
 
-.make .section-title {
+.single-make .section-title {
   float: none;
   width: auto; }
 @media only screen and (min-width: 768px) {
-  .make h2.section-title {
+  .single-make h2.section-title {
     float: left;
     width: 10.25em; } }
 @media only screen and (min-width: 979px) {
-  .make h2.section-title {
+  .single-make h2.section-title {
     width: 15.5em; } }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
-  .make .project-thumb {
+  .single-make .project-thumb {
     float: left;
     margin-top: 1em;
     width: 18.5em; }
-    .make .project-thumb:nth-child(2n-1) {
+    .single-make .project-thumb:nth-child(2n-1) {
       margin-right: 1em; } }
 @media only screen and (min-width: 979px) {
-  .make .project-thumb {
+  .single-make .project-thumb {
     display: block;
     float: left;
     margin: 1em 0 0;
     width: 28.5em; }
-    .make .project-thumb:nth-child(2n-1) {
+    .single-make .project-thumb:nth-child(2n-1) {
       margin-right: 1em; } }
 
 .center {
