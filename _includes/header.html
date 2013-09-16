@@ -1,11 +1,12 @@
 {% include head.html %}
     {% assign pageCat = page.categories | downcase | replace: ' ', '-' %}
     {% if pageCat != '' %}
-        {% assign bodyClass = 'make' %}
+        {% assign bodyClass = pageCat %}
     {% else %}
         {% assign bodyClass = 'home' %}
     {% endif %}
     <body {% if bodyClass %} class="{{ bodyClass }}" {% endif %}>
+        <!-- {{ page.layout }} -->
         <div class="wrap">
             <header>
 
