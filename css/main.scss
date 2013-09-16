@@ -9,7 +9,7 @@
 // .JMML..JMML  JMML  JMML. MMbmmd'   `Ybmd9'.JMML.     `MbmoM9mmmP'
 //                          MM
 //                        .JMML.
-
+@import "normalize";
 //                                ,,           ,,        ,,
 // `7MMF'   `7MF'                 db          *MM      `7MM
 //   `MA     ,V                                MM        MM
@@ -19,13 +19,13 @@
 //      :MM;  8M   MM    MM       MM  8M   MM  MM.   ,M9 MM YM.    , L.   I8
 //       VF   `Moo9^Yo..JMML.   .JMML.`Moo9^Yo.P^YbmdP'.JMML.`Mbmmd' M9mmmP'
 // Colors
-$black:#20005c;
-$purple:#6402ff;
-$bgWhite:hsla(0, 100, 100, 0.8);
+$black: #20005c;
+$purple: #6402ff;
+$bgWhite: hsla(0, 100, 100, 0.8);
 // Gradient Colors
-$gLightPurple:hsla(264, 100, 90, 0.5);
-$white:hsla(0, 100, 100, 0.5);
-$gDarkPurple:hsla(264, 100, 10, 0.1);
+$gLightPurple: hsla(264, 100, 90, 0.5);
+$white: hsla(0, 100, 100, 0.5);
+$gDarkPurple: hsla(264, 100, 10, 0.1);
 // Button Colors
 $buttonL:#dac1ff;
 $buttonD:#7e59b5;
