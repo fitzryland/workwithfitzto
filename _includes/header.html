@@ -1,5 +1,6 @@
 {% include head.html %}
     {% assign pageCat = page.categories | downcase | replace "[", "" | replace "]" "" | replace """ "" | replace: ' ', '-' %}
+    <!-- page.categories: {{ page.categories }} -->
     <!-- pageCat: {{ pageCat }} -->
     {% if pageCat != '' %}
         {% assign bodyClass = pageCat %}
