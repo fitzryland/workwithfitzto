@@ -1,13 +1,24 @@
 TODO
-
+- correct images
+	- logo image -> needs to be resized
+	- project images -> desctop view images are stretched -> need to be replaced with correct size
+- Add image meta
+	- dimentions
+	- alt
+	- meta
+- single-make -> section-desc needs better alignment with title
+- add smooth scroll
 
 TODD NOTES
 - Project skills listed under link
 - make the face cooler -> maybe some sparkle in it
 	- svg mask?
+- update <title> correctly
+- javascript linter, minifier, etc.
 
 FITZ NOTES
-
+- According to analytics, 83% of visitors are on desktop.
+	- desktop view is most important!
 
 
 
@@ -25,4 +36,3 @@ NEXT VERSION
 - submit sitemap - webmaster tools
 - add www redirect
 - meta description might be too long
-- add alt and meta text to images

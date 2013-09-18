@@ -1,0 +1,7 @@
+---
+published: false
+title: Why GIT
+layout: single-document
+excerpt: Why version control is so important for everyone from developer to client.
+---
+<h3>Get GET!</h3>

@@ -1,0 +1,49 @@
+{% include header.html %}
+  <section>
+  	<h1 class="section-title">{{ page.title }}</h1>
+    <p class="clear"></p>
+    <span data-picture data-alt="{{ page.imgAlt }}" class="portfolio-image">
+      <span data-src="../images/{{ page.img }}-small.jpg"></span>
+      <span data-src="../images/{{ page.img }}-medium.jpg" data-media="(min-width: 768px)"></span>
+      <span data-src="../images/{{ page.img }}-large.jpg" data-media="(min-width: 979px)"></span>
+
+      <noscript><img src="../images/{{ page.img }}-small.jpg" alt="{{ page.imgAlt }}"></noscript>
+    </span>
+    <div class="portfolio-description">
+      {{ content }}
+    </div>
+    <div class="portfolio-meta">
+      <p class="portfolio-link">
+        <a href="{{ page.link }}" target="_blank">{{ page.link }}</a>
+      </p>
+      {% if page.services %}
+        <div class="portfolio-services">
+          <h5>Services</h5>
+          <p>{{ page.services }}</p>
+        </div>
+      {% endif %}
+      {% if page.tech %}
+      <div class="portfolio-technology">
+        <h5>Technology</h5>
+        <p>{{ page.tech }}</p>
+      </div>
+      {% endif %}
+    </div>
+  </section>
+  <section id="portfolio">
+    <h2 class="section-title">Portfolio</h2>
+    {% for project in site.categories.make %}
+      {% if project.title != page.title %}
+        <a href="{{ project.url }}" class="project-thumb">
+            <h3>{{ project.title }}</h3>
+            <span data-picture data-alt="{{ project.imgAlt }}" class="project-thumb-image">
+              <span data-src="../images/{{ project.img }}-small.jpg"></span>
+              <span data-src="../images/{{ project.img }}-medium.jpg" data-media="(min-width: 768px)"></span>
+
+              <noscript><img src="../images/{{ project.img }}-small.jpg" alt="{{ project.imgAlt }}"></noscript>
+            </span>
+        </a>
+      {% endif %}
+    {% endfor %}
+  </section>
+{% include footer.html %}

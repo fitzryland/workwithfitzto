@@ -1,35 +1,123 @@
-// Imports ***************************************************************
-@import "../bourbon/_bourbon.scss";
-// Variables ***************************************************************
-$fullBreak:850px;
-$fullWidth:730px;
-$mobileBreak:600px;
-$middleWidth:550px;
-$mobileWidth:316px;
+// http://patorjk.com/software/taag/#p=display&f=Georgia11&t=Type%20Something%20
+// http://patorjk.com/software/taag/#p=display&f=4Max&t=Type%20Something%20
+// `7MMF'                                               mm
+//   MM                                                 MM
+//   MM  `7MMpMMMb.pMMMb. `7MMpdMAo.  ,pW"Wq.`7Mb,od8 mmMMmm ,pP"Ybd
+//   MM    MM    MM    MM   MM   `Wb 6W'   `Wb MM' "'   MM   8I   `"
+//   MM    MM    MM    MM   MM    M8 8M     M8 MM       MM   `YMMMa.
+//   MM    MM    MM    MM   MM   ,AP YA.   ,A9 MM       MM   L.   I8
+// .JMML..JMML  JMML  JMML. MMbmmd'   `Ybmd9'.JMML.     `MbmoM9mmmP'
+//                          MM
+//                        .JMML.
+@import "normalize";
+//                                ,,           ,,        ,,
+// `7MMF'   `7MF'                 db          *MM      `7MM
+//   `MA     ,V                                MM        MM
+//    VM:   ,V ,6"Yb.  `7Mb,od8 `7MM   ,6"Yb.  MM,dMMb.  MM  .gP"Ya  ,pP"Ybd
+//     MM.  M'8)   MM    MM' "'   MM  8)   MM  MM    `Mb MM ,M'   Yb 8I   `"
+//     `MM A'  ,pm9MM    MM       MM   ,pm9MM  MM     M8 MM 8M"""""" `YMMMa.
+//      :MM;  8M   MM    MM       MM  8M   MM  MM.   ,M9 MM YM.    , L.   I8
+//       VF   `Moo9^Yo..JMML.   .JMML.`Moo9^Yo.P^YbmdP'.JMML.`Mbmmd' M9mmmP'
 // Colors
-$black:#20005c;
-$purple:#6402ff;
-$yellow:#f1de00;
-$bgWhite:hsla(0, 100, 100, 0.8);
+$black: #20005c;
+$purple: #6402ff;
+$bgWhite: hsla(0, 100, 100, 0.8);
 // Gradient Colors
-$gLightPurple:hsla(264, 100, 90, 0.5);
-$white:hsla(0, 100, 100, 0.5);
-$gDarkPurple:hsla(264, 100, 10, 0.1);
+$gLightPurple: hsla(264, 100, 90, 0.5);
+$white: hsla(0, 100, 100, 0.5);
+$gDarkPurple: hsla(264, 100, 10, 0.1);
 // Button Colors
-$buttonL:#dac1ff;
-$buttonD:#7e59b5;
-$buttonBorderL:#9f78d9;
-$buttonBorderD:#7b4ac2;
-$buttonTextShadow:#f4ebff;
-// Mixin's *****************************************************************
-@mixin break($point) {
-	@if $point == full {
-		@media only screen and (max-width: $fullBreak) { @content; }
+$buttonL: #dac1ff;
+$buttonD: #7e59b5;
+$buttonBorderL: #9f78d9;
+$buttonBorderD: #7b4ac2;
+$buttonTextShadow: #f4ebff;
+
+$mobileWidth: 20em;
+$midWidth: 40em;
+$fullWidth: 60em;
+// media querys shamelessly stolen/marginally adapted from https://gist.github.com/miguelmota/5316817
+$tablet-min-size: 768px !default;
+$desktop-min-size: 979px !default;
+$desktop-large-min-size: 1200px !default;
+
+
+//                   ,,               ,,             gp
+// `7MMM.     ,MMF'  db               db             \/
+//   MMMb    dPMM                                    `'
+//   M YM   ,M MM  `7MM  `7M'   `MF'`7MM  `7MMpMMMb.   ,pP"Ybd
+//   M  Mb  M' MM    MM    `VA ,V'    MM    MM    MM   8I   `"
+//   M  YM.P'  MM    MM      XMX      MM    MM    MM   `YMMMa.
+//   M  `YM'   MM    MM    ,V' VA.    MM    MM    MM   L.   I8
+// .JML. `'  .JMML..JMML..AM.   .MA..JMML..JMML  JMML. M9mmmP'
+
+// media querys shamelessly stolen/marginally adapted from https://gist.github.com/miguelmota/5316827
+@mixin break($media) {
+	@if $media == mobile {
+		@media only screen and (max-width: $tablet-min-size) { @content; }
 	}
-	@else if $point == mobile {
-		@media only screen and (max-width: $mobileBreak) { @content; }
+	@else if $media == mobile-portrait {
+		@media only screen and (max-width: $tablet-min-size) and (orientation: portrait) { @content; }
+	}
+	@else if $media == mobile-landscape {
+		@media only screen and (max-width: $tablet-min-size) and (orientation: landscape) { @content; }
+	}
+	@else if $media == mobile-tablet {
+		@media only screen and (max-width: $desktop-min-size) { @content; }
+	}
+	@else if $media == tablet {
+		@media only screen and (min-width: $tablet-min-size) and (max-width: $desktop-min-size) { @content; }
+	}
+	@else if $media == tablet-andup {
+		@media only screen and (min-width: $tablet-min-size) { @content; }
+	}
+	@else if $media == tablet-landscape {
+		@media only screen and (min-width: $desktop-min-size) and (orientation: landscape) { @content; }
+	}
+	@else if $media == tablet-desktop {
+		@media only screen and (min-width: $desktop-min-size) { @content; }
+	}
+	@else if $media == desktop {
+		@media only screen and (min-width: $desktop-min-size) { @content; }
+	}
+	@else if $media == desktop-large {
+		@media only screen and (min-width: $desktop-large-min-size) { @content; }
 	}
 }
+// TODO the nth-child selectors for spacing are weak, because they include the other objects in the parent.
+@mixin midsized-two-column-obj() {
+	@include break(tablet) {
+		float: left;
+		margin-top: 1em;
+		width: 18.5em;
+		&:nth-child(2n-1) {
+			margin-right: 1em;
+		}
+	}
+}
+@mixin full-two-column-obj() {
+	@include break(desktop) {
+		display: block;
+		float: left;
+		margin: 1em 0 0;
+		width: 28.5em;
+		&:nth-child(2n-1) {
+			margin-right: 1em;
+		}
+	}
+}
+@mixin full-four-column-obj() {
+	@include break(desktop) {
+		float: left;
+		margin-top: 1em;
+		width: 13.75em;
+		&:not(:last-child) {
+			margin-right: 1em;
+		}
+	}
+}
+
+
 @mixin group() {
 	&:after {
 		content: "";
@@ -37,9 +125,43 @@ $buttonTextShadow:#f4ebff;
 		clear: both;
 	}
 }
-// Extendables *************************************************************
-
-/*********************** General Site Wide Selectors ***********************/
+@mixin transition($prop) {
+	-webkit-transition: $prop 0.2s ease;
+	-moz-transition: $prop 0.2s ease;
+	-o-transition: $prop 0.2s ease;
+	-ms-transition: $prop 0.2s ease;
+	transition: $prop 0.2s ease;
+}
+//                                                        ,,
+// `7MM"""YMM               mm                          `7MM
+//   MM    `7               MM                            MM
+//   MM   d    `7M'   `MF'mmMMmm .gP"Ya `7MMpMMMb.   ,M""bMM
+//   MMmmMM      `VA ,V'    MM  ,M'   Yb  MM    MM ,AP    MM
+//   MM   Y  ,     XMX      MM  8M""""""  MM    MM 8MI    MM
+//   MM     ,M   ,V' VA.    MM  YM.    ,  MM    MM `Mb    MM
+// .JMMmmmmMMM .AM.   .MA.  `Mbmo`Mbmmd'.JMML  JMML.`Wbmd"MML.
+%text-indent {
+	text-indent: 1em;
+}
+//            ,,                                          ,,        ,,
+//  .M"""bgd  db   mm               `7MMF'     A     `7MF'db      `7MM
+// ,MI    "Y       MM                 `MA     ,MA     ,V            MM
+// `MMb.    `7MM mmMMmm .gP"Ya         VM:   ,VVM:   ,V `7MM   ,M""bMM  .gP"Ya
+//   `YMMNq.  MM   MM  ,M'   Yb         MM.  M' MM.  M'   MM ,AP    MM ,M'   Yb
+// .     `MM  MM   MM  8M""""""         `MM A'  `MM A'    MM 8MI    MM 8M""""""
+// Mb     dM  MM   MM  YM.    ,          :MM;    :MM;     MM `Mb    MM YM.    ,
+// P"Ybmmd" .JMML. `Mbmo`Mbmmd'           VF      VF    .JMML.`Wbmd"MML.`Mbmmd'
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	@include break(mobile) {
+		-ms-word-break: break-all;
+		word-break: break-all;
+		word-break: break-word;
+	}
+}
 html {
 	background-color:white;
 	background-image:
@@ -102,43 +224,41 @@ html {
 body {
 	color:$black;
 	font:16px 'Open Sans', sans-serif;
-	font-size:16px;
 	margin:0;
 	padding:0;
+	// TODO - make this work only on mobile!
+	// @include break(mobile-landscape) {
+	// 	font-size: 12px;
+	// }
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Libre Baskerville', serif;
-	font-weight:400;
+	font-weight: 400;
 }
-h1 {
-	font-size:2.5em;
-}
-h2 {
-	font-size:2.2em;
+h1, h2 {
+	font-size: 1.9em;
 }
 h3 {
-	font-size:1.5em;
+	font-size: 1.5em;
 }
 h4 {
-	font-size:1.3em;
+	font-size: 1.3em;
 }
 h5 {
-	font-size:1.1em;
+	font-size: 1.1em;
+	margin: 1.2em 0 0.5em;
 }
 h6 {
-	font-size:1em;
+	font-size: 1em;
 }
 a:link, a:visited {
-	color:$purple;
-	-webkit-transition: all 0.2s ease;
-	-moz-transition: all 0.2s ease;
-	-o-transition: all 0.2s ease;
-	-ms-transition: all 0.2s ease;
-	transition: all 0.2s ease;
+	border-bottom: 1px solid $purple;
+	color:$black;
+	text-decoration: none;
+	@include transition(all);
 }
 a:hover, a:active {
-	background-color:$black;
-	color:white;
+	color:$purple;
 }
 ::selection {
 	background: $gLightPurple;
@@ -146,17 +266,23 @@ a:hover, a:active {
 ::-moz-selection {
 	background: $gLightPurple;
 }
+p {
+	margin: 0.5em 0;
+}
+img {
+	max-width: 100%;
+}
 .wrap {
 	margin: 1em auto;
-	max-width:$fullWidth;
-	min-height:500px;
-	position:relative;
+	width: $mobileWidth;
+	min-height: 500px;
+	position: relative;
 	@include group();
-	@include break(full) {
-		width: 95%;
+	@include break(tablet-andup) {
+		width: $midWidth;
 	}
-	@include break(mobile) {
-		max-width: $mobileWidth;
+	@include break(desktop) {
+		width: $fullWidth;
 	}
 }
 header, section, footer {
@@ -167,200 +293,273 @@ header, section, footer {
 	z-index:0;
 	@include group();
 }
-.buttonWrap {
-	display:block;
-	font-size:1.2em;
-	margin:1.5em 0;
-	text-align:center;
-}
-a.button:link, a.button:visited {
-	background-image: -webkit-linear-gradient(-80deg, $buttonL, $buttonD);
-	background-image: -moz-linear-gradient(-80deg, $buttonL, $buttonD);
-	background-image: linear-gradient(-80deg, $buttonL, $buttonD);
-	border-top:2px solid $buttonBorderL;
-	border-right:2px solid $buttonBorderD;
-	border-bottom:2px solid $buttonBorderD;
-	border-left:2px solid $buttonBorderL;
-	border-radius:2em;
-	color:#603e92;
-	padding: 1em;
-	text-decoration:none;
-}
-a.button:hover, a.button:active {
-	background-image: -webkit-linear-gradient(-80deg, $buttonD, $buttonL);
-	background-image: -moz-linear-gradient(-80deg, $buttonD, $buttonL);
-	background-image: linear-gradient(-80deg, $buttonD, $buttonL);
-	border-top:2px solid $buttonBorderD;
-	border-right:2px solid $buttonBorderL;
-	border-bottom:2px solid $buttonBorderL;
-	border-left:2px solid $buttonBorderD;
-	color:$black;
-}
-a.icon {
-	text-decoration:none;
-}
-footer {
-	text-align:center;
-	p {
-		margin-top: 0;
-	}
-	.icon {
-		font-size: 3em;
-		&:nth-child(4) {
-			margin:0 1em;
-		}
-	}
-	a.icon:link, a.icon:visited {
-		color:$buttonD;
-	}
-	a.icon:hover, a.icon:active {
-		background-color:transparent;
-		color:$buttonBorderL;
-		//text-shadow: 0px 0px 6px $buttonBorderL;
+header {
+	@include break(tablet) {
+		padding: 1em 0;
 	}
 }
-/*********************** Page Specific Selectors ***************************/
-.homeDesc {
-	float:right;
+.header_text {
 	position:relative;
-	width: 40%;
 	z-index:1000;
-	@include break(mobile) {
-		float:none;
-		text-align: center;
-		width:100%;
+	float:none;
+	text-align: center;
+	width:100%;
+	@include break(tablet-andup) {
+		float: right;
+		width: $mobileWidth;
+	}
+	@include break(desktop) {
+		font-size: 20px;
+		width: 25em;
 	}
 	h1 {
 		margin:0.2em 0 0;
-		text-align: center;
+		font-size: 2.7em;
 	}
 	h2 {
 		font-size: 1.4em;
 	}
 	h3 {
 		font-size: 1.3em;
-		text-align: center;
 	}
-	p {
-		@include break(mobile) {
-			text-align: left;
+}
+.header_logo {
+	height:auto;
+	left:1em;
+	opacity: 0.1;
+	position:absolute;
+	top:-1em;
+	width:90%;
+	z-index:700;
+	@include break(tablet-andup) {
+		left: -1em;
+		opacity: 1;
+		width: $mobileWidth + 1em;
+	}
+	@include break(desktop) {
+		top: -7em;
+		width: auto;
+	}
+}
+nav {
+	a {
+		&:not(:last-child) {
+			margin-right: 0.5em;
 		}
 	}
 }
-.logo {
-	height:auto;
-	left:-2em;
-	position:absolute;
-	top:-2em;
-	width:60%;
-	z-index:700;
-	@include break(mobile) {
-		opacity: 0.1;
-		width:115%;
+footer {
+	p {
+		margin-top: 0;
 	}
 }
-h2.title {
-	display:inline;
-	float:left;
-	margin-bottom:1.1em;
-	text-align:center;
-	width:40%;
-	@include break(mobile) {
-		float:none;
+.footer_email {
+	text-align: center;
+	@include break(tablet-andup) {
+		clear: both;
+		padding-top: 0.5em;
 	}
 }
-.portDesc {
-	float:right;
-	width:60%;
-	@include break(mobile) {
-		float:none;
-		width:100%;
+.footer_social {
+	margin: 1.5em 0 1em;
+	text-align: center;
+}
+.section-title, .section-desc {
+	@include full-two-column-obj();
+}
+.section-title {
+	margin-bottom: 1em;
+	padding-left: 0.5em;
+	@include break(tablet) {
+		float: left;
+		width: 10.2em;
+	}
+	@include break(tablet-andup) {
+		padding-left: 1.5em;
+	}
+	@include break(desktop) {
+		width: 15.6em;
+		&:nth-child(2n-1) {
+			margin-right: 0;
+		}
 	}
 }
-article.project {
-	@include group();
-	img {
-		clear:both;
-		display: block;
-		height: auto;
-		width:100%;
+.section-desc {
+	@extend %text-indent;
+	@include midsized-two-column-obj();
+	@include break(desktop) {
+		width: 28.3em;
 	}
 }
-article.project {
-	margin-bottom:4em;
-}
-.projHead {
-	display:inline;
-	float: left;
-	text-align:center;
-	width:40%;
+.project-thumb {
+	display: block;
+	height: 12.4em;
+	overflow: hidden;
+	margin-top: 1em;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	width: 18em;
+	&:hover {
+		.project-thumb-image {
+			opacity: 1;
+		}
+	}
+	@include break(tablet) {
+		height: 12.7em;
+	}
+	@include break(desktop) {
+		height: 19.5em;
+	}
 	h3 {
-		margin-top: 1em;
-	}
-	@include break(mobile) {
-		width:100%;
-	}
-}
-.projCont {
-	display:inline;
-	float: left;
-	margin-top:1.3em;
-	width:60%;
-	@include break(mobile) {
-		width:100%;
+		background-color: $white;
+		margin-top: 0;
+		padding: 0.5em 0;
+		position: relative;
+		z-index: 800;
 	}
 }
-
-
-
-
-
-
-
-@font-face {
-	font-family: 'workwithfitzto-icons';
-	src:url('../icons/workwithfitzto-icons.eot');
-	src:url('../icons/workwithfitzto-icons.eot?#iefix') format('embedded-opentype'),
-		url('../icons/workwithfitzto-icons.woff') format('woff'),
-		url('../icons/workwithfitzto-icons.ttf') format('truetype'),
-		url('../icons/workwithfitzto-icons.svg#workwithfitzto-icons') format('svg');
-	font-weight: normal;
-	font-style: normal;
+a.project-thumb:link, a.project-thumb:visited {
+	border: 0.2em solid $gDarkPurple;
+	color: $black;
+	text-shadow: 0em 0em 0.5em white;
 }
-.icon-list, .icon-github, .icon-twitter, .icon-facebook, .icon-mail, .icon-feed, .icon-dribbble, .icon-linkedin, .icon-share2 {
-	font-family: 'workwithfitzto-icons';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
+a.project-thumb:hover, a.project-thumb:active {
+	border-color: $gLightPurple;
 }
-.icon-list:before {
-	content: "\e004";
+.project-thumb-image {
+	bottom: 0;
+	left: 0;
+	opacity: 0.5;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 200;
+	@include transition(opacity);
+	img {
+		height: auto;
+		width: 100%;
+	}
 }
-.icon-github:before {
-	content: "\e001";
+// `7MM"""Mq.
+//   MM   `MM.
+//   MM   ,M9 ,6"Yb.  .P"Ybmmm .gP"Ya  ,pP"Ybd
+//   MMmmdM9 8)   MM :MI  I8  ,M'   Yb 8I   `"
+//   MM       ,pm9MM  WmmmP"  8M"""""" `YMMMa.
+//   MM      8M   MM 8M       YM.    , L.   I8
+// .JMML.    `Moo9^Yo.YMMMMMb  `Mbmmd' M9mmmP'
+//                   6'     dP
+//                   Ybmmmd'
+//
+// 88  88  dP"Yb  8b    d8 888888
+// 88  88 dP   Yb 88b  d88 88__
+// 888888 Yb   dP 88YbdP88 88""
+// 88  88  YbodP  88 YY 88 888888
+//
+.default {
+	.project-thumb {
+		@include midsized-two-column-obj();
+		@include full-two-column-obj();
+	}
 }
-.icon-twitter:before {
-	content: "\e000";
+.home_post {
+	@include midsized-two-column-obj();
+	@include full-two-column-obj();
+	h3 {
+		margin-bottom: 0;
+	}
+	p {
+		margin-top: 0.5em;
+	}
 }
-.icon-facebook:before {
-	content: "\e002";
+// .dP"Y8 88 88b 88  dP""b8 88     888888     8888b.   dP"Yb   dP""b8
+// `Ybo." 88 88Yb88 dP   `" 88     88__        8I  Yb dP   Yb dP   `"
+// o.`Y8b 88 88 Y88 Yb  "88 88  .o 88""        8I  dY Yb   dP Yb
+// 8bodP' 88 88  Y8  YboodP 88ood8 888888     8888Y"   YbodP   YboodP
+.document-content {
+	@include break(desktop) {
+		width: $midWidth;
+	}
 }
-.icon-mail:before {
-	content: "\e008";
+.latest-posts-title {
+	@include break(desktop) {
+		width: 15.5em;
+	}
 }
-.icon-feed:before {
-	content: "\e007";
+h1.section-title {
+	width: auto;
 }
-.icon-dribbble:before {
-	content: "\e009";
+// .dP"Y8 88 88b 88  dP""b8 88     888888     88""Yb  dP"Yb  88""Yb 888888
+// `Ybo." 88 88Yb88 dP   `" 88     88__       88__dP dP   Yb 88__dP   88
+// o.`Y8b 88 88 Y88 Yb  "88 88  .o 88""       88"""  Yb   dP 88"Yb    88
+// 8bodP' 88 88  Y8  YboodP 88ood8 888888     88      YbodP  88  Yb   88
+.portfolio-image {
+	img {
+		border: 0.2em solid $gDarkPurple;
+		margin-bottom: 1em;
+	}
 }
-.icon-linkedin:before {
-	content: "\e005";
+.portfolio-link {
+	margin: 1em 0;
+	text-align: center;
+	@include break(tablet-andup) {
+		font-size: 1.3em;
+		margin: 1.5em 0 1em;
+	}
+	@include break(desktop) {
+		margin-top: 0;
+	}
 }
-.icon-share2:before {
-	content: "\f147";
+.portfolio-description, .portfolio-meta {
+	@include full-two-column-obj();
+}
+.portfolio-description {
+	@extend %text-indent;
+	@include break(desktop) {
+		padding-right: 1em;
+	}
+	p {
+		&:first-child {
+			@include break(desktop) {
+				margin-top: 0;
+			}
+		}
+	}
+}
+.portfolio-services, .portfolio-technology {
+	@include midsized-two-column-obj();
+}
+/* Test Change 2013.09.16 13:52 */
+.single-make {
+	.section-title {
+		float: none;
+		width: auto;
+	}
+	h2.section-title {
+		@include break(tablet-andup) {
+			float: left;
+			width: 10.25em;
+		}
+		@include break(desktop) {
+			width: 15.5em;
+		}
+	}
+	.project-thumb {
+		@include midsized-two-column-obj();
+		@include full-two-column-obj();
+	}
+}
+//                                                    ,,        ,,
+//   .g8""8q.                                         db      `7MM
+// .dP'    `YM.                                                 MM
+// dM'      `MM `7M'   `MF'.gP"Ya `7Mb,od8 `7Mb,od8 `7MM   ,M""bMM  .gP"Ya  ,pP"Ybd
+// MM        MM   VA   ,V ,M'   Yb  MM' "'   MM' "'   MM ,AP    MM ,M'   Yb 8I   `"
+// MM.      ,MP    VA ,V  8M""""""  MM       MM       MM 8MI    MM 8M"""""" `YMMMa.
+// `Mb.    ,dP'     VVV   YM.    ,  MM       MM       MM `Mb    MM YM.    , L.   I8
+//   `"bmmd"'        W     `Mbmmd'.JMML.   .JMML.   .JMML.`Wbmd"MML.`Mbmmd' M9mmmP'
+.center {
+	text-align: center;
+}
+.clear {
+	clear: both;
 }
