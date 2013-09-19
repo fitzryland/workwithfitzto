@@ -96,7 +96,9 @@ $(document).ready(function() {
   }
   var locationPath = filterPath(location.pathname);
   var scrollElem = scrollableElement('html', 'body');
-
+  if (scrollElem.length <= 0) {
+    scrollElem = 'body';
+  }
   $('a[href*=#]').each(function() {
     var thisPath = filterPath(this.pathname) || locationPath;
     if (  locationPath == thisPath
