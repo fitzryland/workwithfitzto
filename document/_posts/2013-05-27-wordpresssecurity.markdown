@@ -4,6 +4,46 @@ layout: single-document
 excerpt: The whole shabang on things to consider for WordPress security.
 ---
 
+First of all, I am not a security expert. But, anyone that is responsible for pretty much anything on the Internet needs to know a thing or two about security. I make my living by building and maintaining things on the Internet, and anyone in my position must know at least the basics of what to do about security. I hope you learn something from this document, but more importantly, please correct me when I am wrong! Feel free to send me more resources, information, etc. The URL is workwith.fitz.to/document/wordpresssecurity.html for a reason. Lets do this together. Shoot me an email: <a href="mailto:workwith@fitz.to">workwith@fitz.to</a>.
+
+WordPress security and web security in general is primarily about minimizing the likelihood of being attacked. There is no such thing as perfect security. <a href="http://arstechnica.com/security/2013/09/meet-hidden-lynx-the-most-elite-hacker-crew-youve-never-heard-of/" target="_blank">Hacking for hire</a> is big business. If there is will there is a way. So, the real questions are: How strong is their will? How easy is the way?
+
+But, this document is not intended for those looking to store matters of national security or trade secrets. This document is intended for pretty regular WordPress installations. What do you need to know to keep your WordPress site up and running as you would like it to?
+
+<!-- First, what are the real threats to the average WordPress installation? A malicious hacker is interested in information and control. The most common piece of information clients of mine occasionally have to deal with is credit card information. This in information that certainly attracts the interest of attackers and is critical to keep away from attackers. This is a prime area where security needs to be taken seriously. Frequently the most cost effective way to keep credit card information secure is to hire a third party to handle it. There are some great services out there that integrate directly into your website so that the user has a very consistent purchasing experience on your website, but the actual sensitive information never touches your server and goes directly to a very secure third party. So, first step of security: minimize your attackable surface.
+
+http://mashable.com/category/ddos/ -->
+
+Attackers are most motivated to steal sensitive information such as credit card numbers. However, by far the greatest threat to the average WordPress installation are bots trolling the Internet looking for websites with weaknesses ready to exploit. For the most part, these bots are looking for low hanging fruit. If your site puts up much of a barrier the bot will move on to look for an easier target.
+
+Why do people make these bots? Maybe the most interesting, coolest, or scariest is to recruit your computer into a botnet. Basically, these attacks do not have interest in making it apparent that they have compromised your machine. They just want to be able to use your server in a Distributed Denial of Service (DDoS) attack. These attackers can bring down much bigger targets by bombarding them with massive amounts of requests coming from a similarly huge number servers like the server that hosts your site.
+
+Another, much less interesting, motivation to attack your WordPress installation is so that they can deface it. Defacement falls into two categories: link injection and complete takeover. Sometimes
+
+
+Step One: minimize attack surface.
+
+Whenever possible do not store sensitive information anywhere that is web accessible. When practical, use a third party to store and handle credit card information. Stripe is great for this, because it still allows complete integration with your website so that the user never leaves the site in the purchase flow.
+
+<!-- Why would someone want access to your WordPress installation? I break the motivation of malicious hackers down into two categories: steal your information, control your machine. For each of these I will as two questions: How important is it that your website not be compromised? and How motivated are others to getting into it?
+
+Information is king. There is nothing more valuable that information these days. There is big money behind stealing information like trade secrets or matters of national security, but those issues are way out of my depth. With big money comes big motivation. Credit card information is likely the most valuable information that my clients may ask me to deal with. My advice is always to host credit card information with third party service. Stealing credit card information is not quite as big business as corporate espionage but the motivation is still very high, and your risk as a business owner is even higher.
+
+Another example of information security that I have had to deal with is client patient confidentiality. So, what is the assessment of the threat here? Your business is totally dependent upon keeping this information private.
+
+
+Private
+	1. a :  intended for or restricted to the use of a particular person, group, or class <a private park>
+	b :  belonging to or concerning an individual person, company, or interest <a private house>
+	3. c :  preferring to keep personal affairs to oneself :  valuing privacy highly d :  unsuitable for public use or display
+Secret
+	1. a :  kept from knowledge or view :  hidden
+	b :  marked by the habit of discretion :  closemouthed
+	c :  working with hidden aims or methods :  undercover <a secret agent>
+	d :  not acknowledged :  unavowed <a secret bride>
+	e :  conducted in secret <a secret trial> -->
+
+
 ## Theme Development
 <ul>
 	<li>Disallow File Editing from Administration <pre>define('DISALLOW_FILE_EDIT', true);</pre></li>
