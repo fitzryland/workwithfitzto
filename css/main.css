@@ -673,7 +673,7 @@ textarea {
   h2,
   h3 {
     page-break-after: avoid; } }
-.section-desc, .document-content, .portfolio-description {
+.section-desc, .document-content p, .portfolio-description {
   text-indent: 1em; }
 
 * {
