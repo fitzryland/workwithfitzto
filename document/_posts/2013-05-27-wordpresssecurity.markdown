@@ -53,12 +53,12 @@ The next step is to make it harder for intruders to make it into your site. Bell
 
 #### Theme Development
 <ul>
-	<li>Disallow File Editing from Administration <pre>define('DISALLOW_FILE_EDIT', true);</pre></li>
-	<li>Theme Check -> Plugin</li>
+	<li>Disallow File Editing from Administration area in wp-config.php <pre>define('DISALLOW_FILE_EDIT', true);</pre></li>
+	<li><a href="http://wordpress.org/plugins/theme-check/" target="_blank"></a>Theme Check</li> - This plugin checks the theme against the recommended WordPress standards.</li>
 </ul>
 #### WordPress Installation
 <ul>
-	<li>Salts</li>
+	<li>Salts - <a href="http://digwp.com/2010/09/wordpress-security-keys/" target="_blank">Here</a> is what they are, and <a href="https://api.wordpress.org/secret-key/1.1/salt/" target="_blank">here</a> is where to get em!</li>
 	<li>Database Prefix Change</li>
 	<li>Different database user per database</li>
 	<li>Don't use "admin"</li>
