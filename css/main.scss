@@ -477,8 +477,13 @@ a.project-thumb:hover, a.project-thumb:active {
 // o.`Y8b 88 88 Y88 Yb  "88 88  .o 88""        8I  dY Yb   dP Yb
 // 8bodP' 88 88  Y8  YboodP 88ood8 888888     8888Y"   YbodP   YboodP
 .document-content {
+	@extend %text-indent;
+	@include break(tablet-andup) {
+		padding: 0 1.5em;
+	}
 	@include break(desktop) {
-		width: $midWidth;
+		font-size: 1.1em;
+		width: 40em;
 	}
 }
 .latest-posts-title {
