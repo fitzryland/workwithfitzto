@@ -54,52 +54,44 @@ The next step is to make it harder for intruders to make it into your site. Bell
 #### Theme Development
 <ul>
 	<li>Disallow File Editing from Administration area in wp-config.php <pre>define('DISALLOW_FILE_EDIT', true);</pre></li>
-	<li><a href="http://wordpress.org/plugins/theme-check/" target="_blank"></a>Theme Check</li> - This plugin checks the theme against the recommended WordPress standards.</li>
+	<li><a href="http://wordpress.org/plugins/theme-check/" target="_blank">Theme Check</a> - This plugin checks the theme code against the recommended WordPress standards.</li>
 </ul>
 #### WordPress Installation
 <ul>
-	<li>Salts - <a href="http://digwp.com/2010/09/wordpress-security-keys/" target="_blank">Here</a> is what they are, and <a href="https://api.wordpress.org/secret-key/1.1/salt/" target="_blank">here</a> is where to get em!</li>
+	<li>Salts - <a href="http://digwp.com/2010/09/wordpress-security-keys/" target="_blank">Here</a> is why they are important, and <a href="https://api.wordpress.org/secret-key/1.1/salt/" target="_blank">here</a> is where you can get em'</li>
 	<li>Database Prefix Change</li>
 	<li>Different database user per database</li>
-	<li>Don't use "admin"</li>
+	<li>"admin" is always a very insecure username.</li>
 </ul>
 #### Just After Installation
 <ul>
 	<li>.htaccess firewall <a href="http://perishablepress.com/5g-blacklist-2013/">5G Blacklist 2013 - Perishable Press</a></li>
-	<li>Checking and Setting file permissions</li>
-	<li>Kill PHP execution
-		<p>wp-includes, uploads - with an .htaccess in that direcroty
-<!-- 			<pre>
-				#Protect [Directory Name]
-				<Files *.php>
-				Deny from all
-				</Files>
-			</pre> -->
-		</p>
-	</li>
-	<li><a href="http://en.blog.wordpress.com/2013/04/05/two-step-authentication/">Two Factor Authentication</a></li>
+	<li>and pretty much anything on <a href="http://perishablepress.com/category/security/" target="_blank">Perishable Press - Security</a></li>
+	<li><a href="http://codex.wordpress.org/Hardening_WordPress#File_Permissions" target="_blank">Checking and Setting file permissions</a></li>
+	<li><a href="http://www.wpbeginner.com/wp-tutorials/how-to-disable-php-execution-in-certain-wordpress-directories/" target="_blank">Disallow PHP execution</a> in directories that don't need it.</li>
+	<li><a href="http://en.blog.wordpress.com/2013/04/05/two-step-authentication/">Two Factor Authentication</a>. Two passwords are much better than one.</li>
 </ul>
 #### Continued Use
 <ul>
-	<li>Again, don't use "admin" etc.</li>
-	<li>Strong Passwords</li>
+	<li>"admin" is still an abhorrent username.</li>
+	<li>Strong Passwords - Either <a href="http://wordpress.org/plugins/force-strong-passwords/" target="_blank">force em'</a> or <a href="http://windows.microsoft.com/en-us/windows-vista/tips-for-creating-a-strong-password" target="_blank">just use em'</a></li>
 	<li>Minimal Plugins</li>
 	<li>Trusted Networks</li>
 	<li>HTTPS</li>
-	<li>Never Use FTP only SFTP (SSH if you can. More on that in GIT)</li>
+	<li>Never Use FTP only SFTP. SSH if you can. <a href="http://www.eznethelp.com/Resources/whynoftp.html" target="_blank">Here</a> is a hilariously terse description of why not to even allow much less use FTP to connect to your server.</li>
 	<li>Local Virus Scan</li>
 	<li>never share accounts -> accountability</li>
 	<li>never give someone higher privileges than they need</li>
+	<li>Don't give it away. Phishing can be tricky.</li>
 </ul>
 #### Backups
 <ul>
-	<li>Passive Backups</li>
+	<li>Automatic Backups</li>
 	<li>Backups at crucial points</li>
-	<li></li>
 </ul>
 #### Version Control
 <ul>
-	<li>GIT</li>
+	<li>By keeping a record to all changes made to the code that makes up the site a version control system is crucial in diagnosing and even cleaning up an attack. GIT is <a href="http://thkoch2001.github.io/whygitisbetter/" target="_blank">the new standard</a> in version control.</li>
 </ul>
 #### Extra Credit
 <ul>
@@ -107,22 +99,26 @@ The next step is to make it harder for intruders to make it into your site. Bell
 	<li>Filter access by IP</li>
 </ul>
 #### Plugins
+
+Security plugins are kind of interesting.
+
 <ul>
 	<li>http://wordpress.org/plugins/sucuri-scanner/</li>
 	<li>http://wordpress.org/plugins/limit-login-attempts/</li>
 	<li>http://wordpress.org/plugins/wordfence/</li>
 	<li>http://wordpress.org/plugins/theme-check/</li>
 	<li>http://wordpress.org/plugins/force-strong-passwords/</li>
-	<li></li>
-	<li></li>
-	<li></li>
 </ul>
 #### Links
-<a href="http://codex.wordpress.org/Hardening_WordPress">Hardening WordPress</a>
-<a href="http://ithemes.com/2013/04/15/ongoing-wordpress-attacks-details-and-solutions/">iThemes Ongoing WordPress Attacks Details and Solutions</a>
-http://support.hostgator.com/articles/specialized-help/technical/wordpress/wordpress-login-brute-force-attack
-http://blog.sucuri.net/2013/04/mass-wordpress-brute-force-attacks-myth-or-reality.html
-http://wpengine.com/2013/05/brad-williams-on-secure-wordpress-development/
-http://wpengine.com/2013/04/how-tony-perez-of-sucuri-sets-up-his-own-security/
+<ul>
+	<li><a href="http://codex.wordpress.org/Hardening_WordPress">Hardening WordPress</a></li>
+	<li><a href="http://ithemes.com/2013/04/15/ongoing-wordpress-attacks-details-and-solutions/">iThemes Ongoing WordPress Attacks Details and Solutions</a></li>
+	<li><a href="http://support.hostgator.com/articles/specialized-help/technical/wordpress/wordpress-login-brute-force-attack" target="_blank"> Wordpress Login - Brute Force Attack</a></li>
+	<li><a href="http://blog.sucuri.net/2013/04/mass-wordpress-brute-force-attacks-myth-or-reality.html" target="_blank">Mass WordPress Brute Force Attacks? – Myth or Reality</a></li>
+	<li><a href="http://wpengine.com/2013/05/brad-williams-on-secure-wordpress-development/" targer="_blank">
+BRAD WILLIAMS ON SECURE WORDPRESS DEVELOPMENT</a></li>
+	<li><a href="http://wpengine.com/2013/04/how-tony-perez-of-sucuri-sets-up-his-own-security/" target="_blank">HOW TONY PEREZ OF SUCURI SETS UP HIS OWN SECURITY</a></li>
+	<li></li>
+</ul>
 
 
