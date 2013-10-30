@@ -21,7 +21,7 @@
 // Colors
 $black: #20005c;
 $purple: #6402ff;
-$bgWhite: hsla(0, 100, 100, 0.8);
+$bgWhite: hsla(0, 100, 100, 0.9);
 // Gradient Colors
 $gLightPurple: hsla(264, 100, 90, 0.5);
 $white: hsla(0, 100, 100, 0.5);
@@ -220,6 +220,7 @@ html {
 			$white 45px,
 			$white 100px)
 	;
+	height: 100%;
 }
 body {
 	color:$black;
