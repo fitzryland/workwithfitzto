@@ -258,7 +258,7 @@ a:link, a:visited {
 	@include transition(all);
 }
 a:hover, a:active {
-	color: $c-primary2;
+	color: darken($c-primary2, 20%);
 }
 ::selection {
 	background: $c-secondary1;

@@ -727,7 +727,7 @@ a:link, a:visited {
   transition: all 0.2s ease; }
 
 a:hover, a:active {
-  color: #6402ff; }
+  color: #3c009b; }
 
 ::selection {
   background: rgba(224, 204, 255, 0.5); }
