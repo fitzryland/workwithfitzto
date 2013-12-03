@@ -1,7 +1,7 @@
 {% include header.html %}
     <section id="portfolio">
         <h2 class="section-title">Portfolio</h2>
-        <p class="section-desc">To give you a brief idea of what I've been up to recently, here are four websites that I completed in recently. Each represents a passion of mine -- professional or otherwise -- and are built using the latest web standards on WordPress.</p>
+        <p class="section-desc">To give you a brief idea of what I've been up to, here are four websites that I completed recently. Each represents a passion of mine -- professional or otherwise -- and are built using the latest web standards on WordPress.</p>
         {% for project in site.categories.make %}
             <a href="{{ project.url }}" class="project-thumb">
                 <h3>{{ project.title }}</h3>
