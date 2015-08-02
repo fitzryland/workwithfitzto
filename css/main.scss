@@ -358,39 +358,11 @@ footer {
 		padding-top: 0.5em;
 	}
 }
-.footer_social {
-	margin: 1.5em 0 1em;
-	text-align: center;
-}
-.section-title, .section-desc {
-	// @include full-two-column-obj();
+.footer_social, .section-desc {
+	@extend %text-indent;
 	max-width: 18.5em;
 	margin-right: auto;
 	margin-left: auto;
-}
-.section-title {
-	margin-bottom: 1em;
-	padding-left: 0.5em;
-	@include break(tablet) {
-		float: left;
-		width: 10.2em;
-	}
-	@include break(tablet-andup) {
-		padding-left: 1.5em;
-	}
-	@include break(desktop) {
-		width: 15.6em;
-		&:nth-child(2n-1) {
-			margin-right: 0;
-		}
-	}
-}
-.section-desc {
-	@extend %text-indent;
-	@include midsized-two-column-obj();
-	@include break(desktop) {
-		width: 28.3em;
-	}
 }
 .project-thumb {
 	display: block;
