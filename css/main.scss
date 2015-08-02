@@ -286,7 +286,7 @@ img {
 	}
 }
 header, section, footer {
-	background-color: $c-base2;
+	// background-color: $c-base2;
 	margin:2em 0;
 	padding:1em;
 	position:relative;
@@ -304,14 +304,6 @@ header {
 	float:none;
 	text-align: center;
 	width:100%;
-	@include break(tablet-andup) {
-		float: right;
-		width: $mobileWidth;
-	}
-	@include break(desktop) {
-		font-size: 20px;
-		width: 25em;
-	}
 	a {
 		text-decoration: none;
 	}
@@ -371,7 +363,10 @@ footer {
 	text-align: center;
 }
 .section-title, .section-desc {
-	@include full-two-column-obj();
+	// @include full-two-column-obj();
+	max-width: 18.5em
+	margin-right: auto;
+	margin-left: auto;
 }
 .section-title {
 	margin-bottom: 1em;
